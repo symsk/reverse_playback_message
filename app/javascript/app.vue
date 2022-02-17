@@ -1,4 +1,6 @@
 <template>
+  <!-- メインコンテンツ -->
+  <router-view />
   <p>
     {{ message }}
   </p>
@@ -10,7 +12,12 @@ export default {
     return {
       message: "Hello Vue!"
     }
-  }
+  },
+  computed: {
+    isTopPage() {
+      return this.$route.path === "/"
+    }
+}
 }
 </script>
 
