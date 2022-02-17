@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from "../app.vue";
+import Router from '../router/index.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const app = createApp(App);
-  app.mount("#vue-app");
+  createApp(App).use(Router).mount("#vue-app");
 });
