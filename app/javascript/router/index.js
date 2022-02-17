@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import TopIndex from "../pages/top/index.vue"
 import MessageIndex from "../pages/message/index.vue"
+import QuizIndex from "../pages/quiz/index.vue"
 
 const routes = [
   {
@@ -10,9 +11,14 @@ const routes = [
     component: TopIndex,
   },
   {
-    path: '/Message',
+    path: '/message',
     name: 'MessageIndex',
     component: MessageIndex,
+  },
+  {
+    path: '/quiz',
+    name: 'QuizIndex',
+    component: QuizIndex,
   }
 ]
 

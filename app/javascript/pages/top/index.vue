@@ -5,14 +5,14 @@
     <div class="button" @click="startListening">ボタン</div>
   </div>
   <div>
-    <v-btn
-      :to="{ name: 'MessageIndex' }"
+    <router-link :to="{ name: 'MessageIndex'}"
     >
     メッセージページへ
-    </v-btn>
-
-    <router-link :to="{ name: 'MessageIndex'}">
-      メッセージページへ
+    <br>
+    </router-link>
+    <router-link :to="{ name: 'QuizIndex'}"
+    >
+    クイズページへ
     </router-link>
   </div>
   </v-col>
