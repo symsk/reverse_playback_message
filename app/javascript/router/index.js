@@ -1,19 +1,10 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
-import TopIndex from "../pages/top/index.vue"
+const routes = []
 
-Vue.use(Router)
-
-const router = new Router({
-  mode: 'history',
-  routes : [
-    {
-      path: '/',
-      component: TopIndex,
-      name: "TopIndex",
-    },
-  ],
-});
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
 
 export default router
