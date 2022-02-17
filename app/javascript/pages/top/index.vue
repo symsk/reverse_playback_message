@@ -1,8 +1,21 @@
 <template>
+<v-col cols="4">
   <div>
     <button class="button" @click="startListening">ボタン</button>
     <div class="button" @click="startListening">ボタン</div>
   </div>
+  <div>
+    <v-btn
+      :to="{ name: 'MessageIndex' }"
+    >
+    メッセージページへ
+    </v-btn>
+
+    <router-link :to="{ name: 'MessageIndex'}">
+      メッセージページへ
+    </router-link>
+  </div>
+  </v-col>
 </template>
 
 <script>
