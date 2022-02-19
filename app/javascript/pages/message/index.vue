@@ -2,13 +2,22 @@
   <div>
     <p>メッセージページ</p>
   </div>
+  <form @submit.prevent="createMessage">
+  </form>
 </template>
 
 <script>
 // import axios from '../../plugins/axios'
+import axios from 'axios';
 
 export default {
-  name: "MessageIndex"
+  name: "MessageIndex",
+  methods: {
+    createMessage: function() {
+      axios
+        .post('')
+    }
+  }
 }
 </script>
 
