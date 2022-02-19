@@ -2,7 +2,8 @@ class Api::MessageController < ApplicationController
   def index; end
 
   def create
-    message = Message.new(message_params.merge(uuid: SecureRandom.uuid))
+    # message = Message.new(message_params.merge(uuid: SecureRandom.uuid))
+    message = Message.new(message_params)
     mecab = MeCab::Tagger.new("-Oyomi")
     message.message = mecab.parse(message.message)
     message.reverse_message = message.message.to_roman.reverse.
