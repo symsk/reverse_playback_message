@@ -1,25 +1,27 @@
 <template>
   <div>
-    <p>{{ message.reverse_message }}</p>
+    <ul>
+      <li v-for="message in messages">{{ message.reverse_message }}</li>
+    </ul>
   </div>
 </template>
 
 <script>
-// import axios from '../../plugins/axios'
 import axios from 'axios';
 
 export default {
-  name: "UniqueMessage",
-  data: function () {
+  name: 'UniqueMessage',
+  data() {
     return {
       messages: []
     }
   },
-  mounted () {
+  mounted() {
     axios
-      .get('/api/messages.json')
+      .get('/api/messages')
       .then(response => (this.messages = response.data))
-  }
+      .catch(err => console.log(err.status))
+  },
 }
 </script>
 
