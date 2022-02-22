@@ -1,0 +1,5 @@
+<%= form_with model: @message, local: true do |f| %>
+  <%= f.hidden_field :uuid %>
+  <%= f.text_area :message %>
+  <%= f.submit %>
+<% end %>
