@@ -1,6 +1,4 @@
 class MessagesController < ApplicationController
-  def index; end
-
   def show
     @message = Message.find_by(uuid: params[:uuid])
     @url = request.url
