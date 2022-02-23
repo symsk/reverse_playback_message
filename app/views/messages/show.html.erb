@@ -1,10 +1,14 @@
-<div>
-  <%= "#{@message.reverse_message}" %>
-</div>
-<div>
-  <%= "#{@url}" %>
-</div>
-<div>
-  <button>このメッセージを共有する</button>
-  <br>URLとLINEとTwitter
+<div class="container">
+  <div class="main">
+    <p>逆再生してメッセージを解読しよう！</p>
+    <p>※左から右に文字を読んでください</p>
+    <div>
+      <%= "#{@message.reverse_message}" %>
+    </div>
+    <div>
+      <div>
+        <%= render "messages/share_link", url: @url %>
+      </div>
+    </div>
+  </div>
 </div>

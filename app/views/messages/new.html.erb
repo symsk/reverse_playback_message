@@ -1,5 +1,11 @@
-<%= form_with model: @message, local: true do |f| %>
-  <%= f.hidden_field :uuid %>
-  <%= f.text_area :message %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="main">
+    <p>逆再生化したいメッセージを入力しよう！</p>
+    <p>例：「ありがとう」は「うおつあぎら」になるよ！</p>
+    <%= form_with model: @message, local: true do |f| %>
+      <%= f.hidden_field :uuid %>
+      <%= f.text_area :message %><br>
+      <%= f.submit "保存して共有ページへ" %>
+    <% end %>
+  </div>
+</div>
