@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
-  resources :messages, param: :uuid
+  root to: 'static_pages#top'
+
+  resources :messages, param: :uuid, only: %i(show new create)
   resources :quizzes
-  # namespace :api do
-  #   resources :messages
-  # end
-  # get '*path', to: 'home#index'
+
+  get 'privacy', to: 'static_pages#privacy'
+  get 'terms', to: 'static_pages#terms'
+  resource :contacts, only: %i(new create)
 end
