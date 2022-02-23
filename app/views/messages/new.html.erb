@@ -5,7 +5,7 @@
     <%= form_with model: @message, local: true do |f| %>
       <%= f.hidden_field :uuid %>
       <%= f.text_area :message %><br>
-      <%= f.submit "保存して共有ページへ" %>
+      <%= f.submit "保存して共有ページへ", class: "bg-warning text-white text" %>
     <% end %>
   </div>
 </div>
