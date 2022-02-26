@@ -5,5 +5,6 @@
   <%= f.label :password, 'パスワード' %>
   <%= f.password_field :password  %>  
 
-  <%= f.submit "ログイン" %>        
+  <%= f.submit "ログイン" %>
 <% end %>
+<%= link_to("ログアウト", "/logout", {method: "post"}) %>

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # skip_before_action :require_login, only: [:new, :create]
+  before_action :require_login
 
   def new
     @user = User.new
@@ -13,6 +13,10 @@ class UsersController < ApplicationController
       render :new
     end
   end
+
+  # def require_login
+  #   redirect_to root_path
+  # end
 
   private
 
