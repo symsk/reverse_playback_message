@@ -23,6 +23,7 @@ startButton.onclick = function () {
       }).catch(function (err) {
           console.log(err);
       });
+      startButton.disabled = true;
   }
   stopButton.onclick = function () {
       mediaRecorder.stop();
@@ -40,7 +41,6 @@ startButton.onclick = function () {
           document.getElementById("audio").src = window.URL.createObjectURL(event.data);
       }
       localStream.getTracks().forEach(track => track.stop());
-      startButton.disabled = true;
       stopButton.disabled = true;
   }
 
@@ -69,4 +69,3 @@ startButton.onclick = function () {
     
     document.getElementById(id).play();
   }
-  
