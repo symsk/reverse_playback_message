@@ -6,9 +6,33 @@
       <%= "#{@message.reverse_message}" %>
     </div>
     <div>
+      <input type="hidden" id="rate" size="3" value="1.0"/>
       <div>
-        <%= render "messages/share_link", url: @url %>
+        <button><a id="reload">リセット</a></button>
+        <%# <button><a onclick="reset()">リセット</a></button> %>
       </div>
+      <div>
+        <button id="start">録音開始</button>
+      </div>
+      <div>
+        <button id="stop">録音停止</button>
+      </div>
+      <div>
+        <div class="audio">
+          <audio id="audio"></audio>
+          <div class="btn01">
+            <div>
+              <button id="btn">再生ボタン</button>
+            </div>
+            <div>
+              <%# <button id="reverse_btn" onclick="play(true)">逆再生ボタン</button> %>
+              <button id="reverse_btn">逆再生ボタン</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%= render "messages/share_link", url: @url %>
     </div>
   </div>
 </div>
+<%= javascript_pack_tag 'recording' %>
