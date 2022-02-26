@@ -13,16 +13,24 @@ class MessagesController < ApplicationController
     mecab = MeCab::Tagger.new("-Oyomi")
     @message.message = mecab.parse(@message.message)
     @message.reverse_message = @message.message.to_roman.reverse.
-      gsub(/!|！|g$|m|t|s|y$|h$|b$/, 
+      gsub(/!|！|g$|m|t|y$|h$|b$|n|/, 
         "!|！" => "", 
         "g" => "gu", 
         "m" => "mu", 
         "t" => "tu", 
-        "s" => "",
         "y" => "yu",
         "h" => "ti",
         "b" => "bu",
-      ).to_kana
+        "n" => "nn",
+      ).to_kana.
+      gsub(/g|r|k|h|ぢ|s|/,
+        "g" => "ぐ", 
+        "r" => "る",
+        "k" => "く",
+        "h" => "ひ",
+        "ぢ" => "でぃ",
+        "s" => "す",
+      ).delete("a""b""c""d""e""f""g""h""i""j""k""l""m""n""o""p""q""r""s""t""u""v""w""x""y""z")
 
       if @message.save
         redirect_to message_path(@message)
