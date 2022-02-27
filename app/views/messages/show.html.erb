@@ -9,7 +9,6 @@
       <input type="hidden" id="rate" size="3" value="1.0"/>
       <div>
         <button><a id="reload">リセット</a></button>
-        <%# <button><a onclick="reset()">リセット</a></button> %>
       </div>
       <div>
         <button id="start">録音開始</button>
@@ -18,17 +17,12 @@
         <button id="stop">録音停止</button>
       </div>
       <div>
-        <div class="audio">
-          <audio id="audio"></audio>
-          <div class="btn01">
-            <div>
-              <button id="btn">再生ボタン</button>
-            </div>
-            <div>
-              <%# <button id="reverse_btn" onclick="play(true)">逆再生ボタン</button> %>
-              <button id="reverse_btn">逆再生ボタン</button>
-            </div>
-          </div>
+        <audio id="audio"></audio>
+        <div>
+          <button id="btn">再生ボタン</button>
+        </div>
+        <div>
+          <button id="reverse_btn">逆再生ボタン</button>
         </div>
       </div>
       <%= render "messages/share_link", url: @url %>
