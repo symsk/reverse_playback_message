@@ -18,14 +18,4 @@ class UserSessionsController < ApplicationController
     logout
     redirect_to root_path, notice: 'ログアウトしました'
   end
-
-  # def require_login
-  #   redirect_to root_path
-  # end
-
-  # private
-
-  # def not_authenticated
-  #   redirect_to login_path
-  # end
 end
