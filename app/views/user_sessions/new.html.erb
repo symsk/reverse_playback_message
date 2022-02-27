@@ -1,10 +1,25 @@
-<%= form_with url: login_path, local: true do |f| %>
-  <%= f.label :email, 'メールアドレス' %>
-  <%= f.text_field :email  %>
-
-  <%= f.label :password, 'パスワード' %>
-  <%= f.password_field :password  %>  
-
-  <%= f.submit "ログイン" %>
-<% end %>
-<%= link_to("ログアウト", "/logout", {method: "post"}) %>
+<div class="container">
+  <div class="main">
+    <%= form_with url: login_path, local: true do |f| %>
+    <div>
+      <%= f.label :email, 'メールアドレス' %>
+    </div>  
+    <div> 
+      <%= f.text_field :email  %>
+    </div>
+    <div>
+      <%= f.label :password, 'パスワード' %>
+    </div>  
+    <div>  
+      <%= f.password_field :password  %>  
+    </div>
+    <%# <div style="margin-top: 3px;"> %>
+    <div style="margin-top: 5px;">
+      <%= f.submit "ログイン" %>
+    </div>
+    <% end %>
+    <div style="margin-top: 5px;">
+      <%= link_to("ログアウト", "/logout", {method: "post"}) %>
+    </div>
+  </div>
+</div>

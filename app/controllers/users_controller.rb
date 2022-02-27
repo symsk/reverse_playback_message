@@ -13,11 +13,7 @@ class UsersController < ApplicationController
       render :new
     end
   end
-
-  # def require_login
-  #   redirect_to root_path
-  # end
-
+  
   private
 
   def user_params
