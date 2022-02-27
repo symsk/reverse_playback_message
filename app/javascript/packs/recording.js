@@ -3,6 +3,8 @@ let startRecording = document.getElementById("start");
 let stopRecording = document.getElementById("stop");
 let playButton = document.getElementById("btn");
 let reverseButton = document.getElementById("reverse_btn");
+let answerButton = document.getElementById("answer_btn");
+let answer = document.getElementById("answer");
 const context = new AudioContext();
 let mediaRecorder;
 let localStream;
@@ -27,7 +29,7 @@ startRecording.onclick = () => {
       });
       startRecording.disabled = true;
   }
-stopRecording.onclick =  () => {
+stopRecording.onclick = () => {
     mediaRecorder.stop();
     console.log("Status: " + mediaRecorder.state);
     mediaRecorder.ondataavailable = (event) => {
@@ -59,7 +61,7 @@ reverseButton.onclick = () => {
     source.start(0);
 }
 
-playButton.onclick =  () => {
+playButton.onclick = () => {
   let id = 'audio';
   if( typeof( document.getElementById(id).currentTime ) != 'undefined' )
   {
@@ -67,4 +69,12 @@ playButton.onclick =  () => {
   }
   
   document.getElementById(id).play();
+}
+
+answerButton.onclick = () => {
+  if(getComputedStyle(answer).visibility == "hidden"){
+    answer.style.visibility = "visible";
+  } else {
+    answer.style.visibility = "hidden";
+  }
 }
