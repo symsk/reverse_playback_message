@@ -19,3 +19,25 @@
 .main {
   text-align: center;
 }
+
+.text-area {
+  position: relative;
+}
+
+.fukidasi {
+  position: absolute;
+  right: 30%;
+  width: 350px;
+  top: 50px;
+  display: block;
+  margin: auto;
+}
+
+.hiyoko {
+  position: absolute;
+  right: 40%;
+  width: 170px;
+  top: 210px;
+  display: block;
+  margin: auto;
+}
