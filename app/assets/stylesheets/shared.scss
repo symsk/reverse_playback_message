@@ -1,5 +1,17 @@
 .header {
   background-color: #ffb300;
+  position: relative;
+}
+
+.img-area {
+  height: 60px;
+}
+
+.img-title {
+  position: absolute;
+  height: 256px;
+  top: -97px;
+  left: -110px;
 }
 
 .footer {
