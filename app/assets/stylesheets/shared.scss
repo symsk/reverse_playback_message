@@ -16,4 +16,21 @@
 
 .footer {
   background-color: #ffb300;
+  text-align: center;
+}
+
+.footer-area {
+  height: 60px;
+  padding-top: 5px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(0, 0, 0) ;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.link:hover {
+  color: rgb(95, 95, 95) ; 
 }
