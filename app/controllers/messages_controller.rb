@@ -35,7 +35,7 @@ class MessagesController < ApplicationController
       if @message.save
         redirect_to message_path(@message)
       else
-        render root_path
+        render :new
       end
   end
 
