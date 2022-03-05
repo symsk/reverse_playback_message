@@ -35,12 +35,12 @@ class MessagesController < ApplicationController
       if @message.save
         redirect_to message_path(@message)
       else
-        render root_path
+        render :new
       end
   end
 
   private
   def message_params
-    params.require(:message).permit(:message)
+    params.require(:message).permit(:uuid, :message)
   end
 end
