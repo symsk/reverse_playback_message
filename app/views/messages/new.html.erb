@@ -4,8 +4,9 @@
     <p>例：「ありがとう」は「うおつあぎら」になるよ！</p>
     <%= form_with model: @message, local: true do |f| %>
       <%= f.hidden_field :uuid %>
-      <%= f.text_area :message %><br>
+      <%= f.text_area :message, maxlength: "30" %><br>
       <%= f.submit "保存して共有ページへ", class: "bg-warning text-white text" %>
     <% end %>
+    <p>変換できたら共有ページに移動するよ！</p>
   </div>
 </div>
