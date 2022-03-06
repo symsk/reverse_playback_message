@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'privacy', to: 'static_pages#privacy'
   get 'terms', to: 'static_pages#terms'
-  # resources :users, only: %i[new create]
+  get 'guide', to: 'static_pages#guide'
 
   get '/login', to: 'user_sessions#new'
   post '/login', to: 'user_sessions#create'
