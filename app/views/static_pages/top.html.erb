@@ -4,10 +4,13 @@
   <div class="main">
     <%= image_tag "top_fukidasi.png", class: "top-fukidasi" %>
     <div>
-      <%= link_to "メッセージ作成" , new_message_path %>
+      <%= link_to "遊び方" , guide_path, class: "top-link" %>
     </div>
     <div>
-      <%= link_to "クイズ一覧ページ" , quizzes_path %>
+      <%= link_to "メッセージを送る" , new_message_path, class: "top-link" %>
+    </div>
+    <div>
+      <%= link_to "1人で遊ぶ" , quizzes_path, class: "top-link" %>
     </div>
   </div>
 </div>

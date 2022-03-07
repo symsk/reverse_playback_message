@@ -33,3 +33,21 @@
 .terms {
   text-align: left;
 }
+
+.top-link {
+  text-decoration: none;
+  color: rgb(0, 0, 0) ;
+}
+
+.top-link:hover {
+  color: rgb(95, 95, 95) ; 
+}
+
+.guide-send {
+  margin-top: -90px;
+}
+
+.guide-receive {
+  margin-top: -180px;
+  margin-bottom: -90px;
+}
