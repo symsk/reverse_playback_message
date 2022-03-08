@@ -1,7 +1,11 @@
 <div class="container">
   <div class="main">
     <h1>遊び方</h1>
+    <p class="guide-text">一言メッセージやキーワードを逆再生化して、<br>解読してもらうアプリです！</p>
     <%= image_tag "guide_send.png", class: "guide-send" %><br>
     <%= image_tag "guide_receive.png", class: "guide-receive" %>
+    <div>
+      <%= button_to "メッセージを送る", new_message_path, method: :get, class: "bg-warning text-white text" %>
+    </div>
   </div>
 </div>
