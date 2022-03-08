@@ -6,4 +6,6 @@ class StaticPagesController < ApplicationController
   def terms; end
 
   def guide; end
+
+  def message_sample; end
 end

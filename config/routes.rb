@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'privacy', to: 'static_pages#privacy'
   get 'terms', to: 'static_pages#terms'
   get 'guide', to: 'static_pages#guide'
+  get 'message_sample', to: 'static_pages#message_sample'
 
   get '/login', to: 'user_sessions#new'
   post '/login', to: 'user_sessions#create'
