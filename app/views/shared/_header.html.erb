@@ -1,8 +1,23 @@
-<header class="#">
+<header class="sticky-top">
   <div class="header">
-    <nav class="img-area">
+    <nav class="img-area navbar navbar-expand-md">
       <%= link_to image_tag("title.png", class: "img-title"), root_path %>
-      <%= link_to "メッセージサンプル", message_sample_path, class: "header-message-sample" %>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <%= link_to "遊び方", guide_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "メッセージを送る", new_message_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "1人で遊ぶ", quizzes_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "メッセージサンプル", message_sample_path, class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
     </nav>
   </div>
 </header>

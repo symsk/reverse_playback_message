@@ -14,10 +14,20 @@
   left: -110px;
 }
 
-.header-message-sample {
+.navbar-nav {
   position: relative;
-  right: -80%;
-  top: 15px;
+  right: -60%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgb(0, 0, 0) ;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.nav-link:hover {
+  color: rgb(95, 95, 95) ; 
 }
 
 .footer {
