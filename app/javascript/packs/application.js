@@ -14,4 +14,6 @@ import "../stylesheets/application.scss";
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-require('./hello_vue.js')
+require("./hello_vue.js")
+require("jquery")
+require("./nav.js")
