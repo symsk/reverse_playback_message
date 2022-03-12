@@ -1,7 +1,6 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
 .bg {
   background-color: #FFF3D6;
   font-family: "keifont";
@@ -18,8 +17,6 @@
 
 .main {
   text-align: center;
-  padding-top: 15px;
-  margin-top: 20px;
 }
 
 .top-link-group {
@@ -28,9 +25,8 @@
 
 .top-link {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(54, 54, 54);
   font-size: 20px;
-  padding-top: 100px;
 }
 
 .top-link:hover {
@@ -38,8 +34,7 @@
 }
 
 .top-fukidasi {
-  width: 500px;
-  margin-top: -300px;
+  width: 100%;
 }
 
 .privacy {
