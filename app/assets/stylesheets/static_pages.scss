@@ -22,9 +22,24 @@
   margin-top: 20px;
 }
 
+.top-link-group {
+  padding-top: 20px;
+}
+
+.top-link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  padding-top: 100px;
+}
+
+.top-link:hover {
+  color: rgb(95, 95, 95) ; 
+}
+
 .top-fukidasi {
   width: 500px;
-  margin-top: -350px;
+  margin-top: -300px;
 }
 
 .privacy {
@@ -34,15 +49,6 @@
 
 .terms {
   text-align: left;
-}
-
-.top-link {
-  text-decoration: none;
-  color: rgb(0, 0, 0) ;
-}
-
-.top-link:hover {
-  color: rgb(95, 95, 95) ; 
 }
 
 .guide-text {
