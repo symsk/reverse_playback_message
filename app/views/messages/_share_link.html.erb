@@ -1,7 +1,9 @@
 <p>このページを共有しよう！</p>
 <input id="copyTarget" type="text" value="<%= "#{url}" %>" readonly>
-<button onclick="copyToClipboard()">URLをコピー</button>
-<br>LINE&Twitter
+<button onclick="copyToClipboard()" class="url-btn">URLをコピー</button>
+<p><%= link_to "Twitterでシェア" , "https://twitter.com/share?url=#{url}", class: "message-share", target: "_blank" %></p>
+<p><%= link_to "LINEでシェア" , "https://line.me/R/msg/text/?#{url}", class: "message-share", target: "_blank" %></p>
+<br>
 <script>
   function copyToClipboard() {
     let copyTarget = document.getElementById("copyTarget");
