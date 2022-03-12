@@ -115,8 +115,33 @@
 }
 
 .footer-area {
-  height: 60px;
+  width: 100%;
+  font-size: 12px;
   padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.copy-right {
+  font-size: 12px;
+  margin-top: -5px;
+  padding-bottom: 5px;
+}
+
+.footer-area a {
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+  width: 50%;
+}
+
+@media screen and (min-width:900px) {
+  .footer-area {
+    display: flex;
+  }
+  
+  .footer-area a {
+    width: 100%;
+  }
 }
 
 .footer-link {
