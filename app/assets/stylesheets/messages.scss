@@ -1,4 +1,7 @@
 .text-white {
+  border-radius: 20px;
+  height: 40px;
+  width: 200px;
   -webkit-text-stroke: 0.5px #000;
 }
 
@@ -12,4 +15,36 @@
 
 .message {
   color: rgb(54, 54, 54);
+}
+
+.message-btn {
+  border-radius: 40px;
+  height: 70px;
+  width: 200px;
+  -webkit-text-stroke: 0.3px #000;
+}
+
+.reset {
+  background-color: rgb(54, 54, 54);
+  color: #fff;
+}
+
+.start {
+  background-color: #4B5A78;
+  color: #fff;
+}
+
+.stop {
+  background-color: #b19e81;
+  color: #fff;
+}
+
+.playback {
+  background-color: #927447;
+  color: #fff;
+}
+
+.reverse-playback {
+  background-color: #FAB400;
+  color: #fff;
 }
