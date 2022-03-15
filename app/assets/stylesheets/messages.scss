@@ -1,3 +1,11 @@
+.reverse-message-area {
+  background-color:rgb(255, 255, 255);
+  padding: 20px 20px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  border-radius: 40px;
+}
+
 .text-white {
   border-radius: 20px;
   height: 40px;
@@ -21,6 +29,7 @@
   border-radius: 40px;
   height: 70px;
   width: 200px;
+  margin-top: 1px;
   -webkit-text-stroke: 0.3px #000;
 }
 
@@ -47,6 +56,10 @@
 .reverse-playback {
   background-color: #FAB400;
   color: #fff;
+}
+
+.url-btn {
+  margin-top: 3%;
 }
 
 /* ローディング画面 */
