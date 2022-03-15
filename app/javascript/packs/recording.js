@@ -29,7 +29,7 @@ startRecording.onclick = () => {
           console.log(err);
       });
       startRecording.disabled = true;
-      spinner.style.backgroundColor = "#FAB400";
+      startRecording.textContent = "録音中...";
 }
 
 stopRecording.onclick = () => {
@@ -49,7 +49,7 @@ stopRecording.onclick = () => {
     }
     localStream.getTracks().forEach(track => track.stop());
     stopRecording.disabled = true;
-    spinner.style.backgroundColor = "initial";
+    startRecording.textContent = "録音開始";
 }
 
 reverseButton.onclick = () => {
