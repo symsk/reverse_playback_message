@@ -5,6 +5,7 @@ let playButton = document.getElementById("btn");
 let reverseButton = document.getElementById("reverse_btn");
 let answerButton = document.getElementById("answer_btn");
 let answer = document.getElementById("answer");
+let spinner = document.getElementById("spinner");
 const context = new AudioContext();
 let mediaRecorder;
 let localStream;
@@ -28,7 +29,9 @@ startRecording.onclick = () => {
           console.log(err);
       });
       startRecording.disabled = true;
-  }
+      startRecording.textContent = "録音中...";
+}
+
 stopRecording.onclick = () => {
     mediaRecorder.stop();
     console.log("Status: " + mediaRecorder.state);
@@ -46,6 +49,7 @@ stopRecording.onclick = () => {
     }
     localStream.getTracks().forEach(track => track.stop());
     stopRecording.disabled = true;
+    startRecording.textContent = "録音開始";
 }
 
 reverseButton.onclick = () => {
