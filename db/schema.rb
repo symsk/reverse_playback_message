@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2022_02_14_143952) do
 
-  create_table "messages", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "messages", force: :cascade do |t|
     t.string "uuid", null: false
     t.string "message"
     t.string "reverse_message"
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 2022_02_14_143952) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "quizzes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "quizzes", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "answer"
     t.string "reverse_voice"
@@ -29,7 +32,7 @@ ActiveRecord::Schema.define(version: 2022_02_14_143952) do
     t.index ["user_id"], name: "index_quizzes_on_user_id"
   end
 
-  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
     t.string "crypted_password"
