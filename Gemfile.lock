@@ -387,7 +387,7 @@ DEPENDENCIES
   factory_bot_rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
-  mecab
+  mecab (= 0.996)
   miyabi
   pg (~> 1.1)
   puma (~> 5.0)
