@@ -81,5 +81,5 @@ test:
 #
 production:
   <<: *default
-  database: reverse_playback_message_production
-  username: reverse_playback_message
+  adapter: postgresql
+  encoding: unicode
