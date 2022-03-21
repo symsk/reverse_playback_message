@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.0"
 
-set :application, "chotto_wakaranai"
+set :application, "reverse-playback-message"
 set :repo_url, "git@github.com:symsk/reverse-playback-message.git"
 set :rbenv_ruby, File.read('.ruby-version').strip
 set :branch, ENV['BRANCH'] || "main"

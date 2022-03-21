@@ -50,8 +50,7 @@ test:
 #
 production:
   <<: *default
-  database: chotto_wakaranai_production
+  database: reverse_playback_message_production
   username: root
   password: <%= ENV['DB_PRODUCTION_PASS'] %>
   host: <%= ENV['DB_PRODUCTION_HOSTNAME'] %>
-
