@@ -195,6 +195,8 @@ GEM
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
+    natto (1.2.0)
+      ffi (>= 1.9.0)
     net-http-digest_auth (1.4.1)
     net-http-persistent (2.9.4)
     net-scp (3.0.0)
@@ -389,6 +391,7 @@ DEPENDENCIES
   listen (~> 3.3)
   mecab (= 0.996)
   miyabi
+  natto
   pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
