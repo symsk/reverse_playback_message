@@ -58,9 +58,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'dotenv-rails'
 gem 'sorcery'
-gem 'mecab', '0.996'
-gem 'miyabi'
 gem 'romkan'
 gem 'webrick'
 gem 'carrierwave'
-gem 'suika'

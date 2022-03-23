@@ -122,6 +122,7 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.6.1)
+    jumanpp_ruby (0.1.2)
     jwt (2.3.0)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -228,6 +229,8 @@ GEM
     regexp_parser (2.2.1)
     require_all (3.0.0)
     rexml (3.2.5)
+    romaji (0.2.4)
+      rake (>= 0.8.0)
     romkan (0.4.0)
     rspec-core (3.11.0)
       rspec-support (~> 3.11.0)
@@ -338,6 +341,7 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   jbuilder (~> 2.7)
+  jumanpp_ruby
   listen (~> 3.3)
   mecab (= 0.996)
   miyabi
@@ -346,6 +350,7 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4)
   rails_best_practices
+  romaji
   romkan
   rspec-rails (~> 5.0.0)
   rubocop

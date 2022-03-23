@@ -3,14 +3,14 @@
     <div class="message">
       <h2>メッセージを送る</h2>
       <p>逆再生化したいメッセージを入力しよう！</p>
-      <p>例：「ありがとう」は「うおつあぎら」になるよ！</p>
+      <p>例：「よろしく」は「うきひそろゆ」になるよ！</p>
+      <p>※ひらがなで入力してね！</p>
       <%= form_with model: @message, local: true do |f| %>
         <%= f.hidden_field :uuid %>
         <%= f.text_area :message, maxlength: "30", id: "text-area" %><br>
         <p class="text-counter">あと<span id="text-lest">30</span>文字入力できるよ！</p>
         <%= f.submit "保存して共有ページへ", class: "bg-warning text-white text" %>
       <% end %>
-      <p>※変換できたら共有ページに移動するよ！</p>
     </div>
   </div>
 </div>

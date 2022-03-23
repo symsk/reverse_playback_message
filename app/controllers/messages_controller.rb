@@ -10,9 +10,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params.merge(uuid: SecureRandom.uuid))
-    mecab = MeCab::Tagger.new("-Oyomi")
-    @message.message = mecab.parse(@message.message)
-    @message.reverse_message = @message.message.to_roman.reverse.
+    @message.reverse_message = @message.message.to_roma.reverse.
       gsub(/!|！|g$|m|t|y$|h$|b$|n|/, 
         "!|！" => "", 
         "g" => "gu", 
