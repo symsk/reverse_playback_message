@@ -19,5 +19,4 @@ Rails.application.routes.draw do
   post '/logout', to: 'user_sessions#destroy'
   resources :password_resets
   get '*path', to: 'static_pages#top'
-
 end
