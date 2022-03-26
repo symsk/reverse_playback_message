@@ -50,13 +50,14 @@
 }
 
 #g-nav li a {
+  font-size: 25px;
   color: rgb(54, 54, 54);
   text-decoration: none;
   padding: 10px;
   display: block;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  -webkit-text-stroke: 0.2px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.3px rgb(255, 255, 255);
 }
 
 .open-btn {
@@ -147,6 +148,7 @@
 }
 
 .footer-link {
+  font-size: 15px;
   text-decoration: none;
   color: rgb(54, 54, 54);
   margin-right: 50px;
