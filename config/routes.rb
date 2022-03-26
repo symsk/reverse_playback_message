@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :messages, param: :uuid, only: %i[show new create]
   resources :quizzes
+  resources :users, only: %i[new create]
 
   get 'privacy', to: 'static_pages#privacy'
   get 'terms', to: 'static_pages#terms'

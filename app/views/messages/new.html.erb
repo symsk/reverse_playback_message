@@ -1,10 +1,12 @@
 <div class="container">
   <div class="main">
-    <div class="message">
-      <h2>メッセージを送る</h2>
-      <p>逆再生化したいメッセージを入力しよう！</p>
-      <p>例：「よろしく」は「うきひそろゆ」になるよ！</p>
-      <p>※ひらがなで入力してね！</p>
+    <div class="message fukidasi">
+      <div class="text-block">
+        <h2 >メッセージを送る</h2>
+        <p>逆再生化したいメッセージを入力しよう！</p>
+        <p>「よろしく」は「うきひそろゆ」になるよ！</p>
+        <p>※ひらがなで入力してね！</p>
+      </div>
       <%= form_with model: @message, local: true do |f| %>
         <%= f.hidden_field :uuid %>
         <%= f.text_area :message, maxlength: "30", id: "text-area" %><br>

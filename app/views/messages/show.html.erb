@@ -1,6 +1,7 @@
 <div class="container">
   <div class="main">
-    <p>逆再生してメッセージを解読しよう！<br>※左から右に文字を読んでください</p>
+    <h3 class="message-title-text">逆再生してメッセージを解読しよう！</h3>
+    <p class="message-top-text">左から右に文字を読んでね！<br>「録音中...」にならないときは<br>「音声リセット」を押してね！</p>
     <div class="reverse-message-area">
       <%= "#{@message.reverse_message}" %>
     </div>
@@ -22,7 +23,7 @@
         </div>
       </div>
       <div>
-        <button class="message-btn reset" id="reload">音声をリセット</button>
+        <button class="message-btn reset" id="reload">音声リセット</button>
       </div>
       <%= render "messages/share_link", url: @url %>
     </div>
