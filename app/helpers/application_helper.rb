@@ -2,7 +2,7 @@ module ApplicationHelper
   def default_meta_tags
     {
       title: '逆再生メッセージ「ちょっと何言ってるか分からない」',
-      description: 'メッセージやキーワードなどを逆再生化して解読してもらうアプリです。',
+      description: 'メッセージやキーワードを逆再生化して解読してもらうアプリです！',
       keywords: '逆再生,メッセージ,ちょっと何言ってるか分からない',
       canonical: request.original_url,
       noindex: ! Rails.env.production?,
