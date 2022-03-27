@@ -1,3 +1,8 @@
+.message-container {
+  margin-top: -300px;
+  margin-bottom: -200px;
+}
+
 .message-fukidasi-img {
   margin-bottom: -40px;
   width: 100%;
@@ -37,6 +42,10 @@
   font-size: 14px;
 }
 
+.attention {
+  font-size: 12px;
+}
+
 .message-btn {
   border-radius: 40px;
   height: 70px;
@@ -50,6 +59,12 @@
 .reset {
   background-color: rgb(54, 54, 54);
   color: #fff;
+}
+
+.message-top-text-reset {
+  font-size: 12px;
+  margin-top: 3px;
+  margin-bottom: -1px;
 }
 
 .start {
@@ -115,6 +130,7 @@
   -webkit-text-stroke: 0.2px rgb(255, 255, 255);
   font-size: 20px;
   background-color: #FFE552;
-  margin-bottom: -30px;
-  width: 100vw;
+  width: 100%;
+  text-align: center;
+  margin-bottom: -100px;
 }

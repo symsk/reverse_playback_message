@@ -1,7 +1,13 @@
 <div class="container">
   <div class="main">
     <div>
-      <h2>問題</h2>
+      <% if "#{@quiz.id}" == "1" %>
+        <p>初級</p>
+      <% elsif "#{@quiz.id}" == "2" %>
+        <p>中級</p>
+      <% else %>
+        <p>上級</p>
+      <% end %>
       <div>
         <%= audio_tag("#{@quiz.reverse_voice}", controls: true ) %>
       </div>

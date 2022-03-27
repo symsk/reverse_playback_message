@@ -1,18 +1,20 @@
+<% if alert %>
+  <div class="alert"><%= alert %></div>
+<% end %>
 <div class="container">
-  <div class="main">
-    <% if alert %>
-      <div class="alert"><%= alert %></div>
-    <% end %>
-    <div class="message-fukidasi-img">
-      <%= image_tag "message_fukidasi.png" %>
-    </div>
-    <div>
-      <%= form_with model: @message, local: true do |f| %>
-        <%= f.hidden_field :uuid %>
-        <%= f.text_area :message, maxlength: "30", id: "text-area", maxlength: "30" %><br>
-        <p class="text-counter">あと<span id="text-lest">30</span>文字入力できるよ！</p>
-        <%= f.submit "保存して共有ページへ", class: "bg-warning text-white text" %>
-      <% end %>
+  <div class="message-container">
+    <div class="main">
+      <div class="message-fukidasi-img">
+        <%= image_tag "message_fukidasi.png" %>
+      </div>
+      <div>
+        <%= form_with model: @message, local: true do |f| %>
+          <%= f.hidden_field :uuid %>
+          <%= f.text_area :message, id: "text-area", maxlength: "50" %><br>
+          <p class="text-counter">あと<span id="text-lest">50</span>文字入力できるよ！</p>
+          <%= f.submit "保存して共有ページへ", class: "bg-warning text-white text" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

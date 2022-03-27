@@ -36,7 +36,7 @@ class ReverseVoiceUploader < CarrierWave::Uploader::Base
   # Add an allowlist of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_allowlist
-    %w(wav mp3)
+    %w(wav mp3 m4a)
   end
 
   # Override the filename of the uploaded files:
