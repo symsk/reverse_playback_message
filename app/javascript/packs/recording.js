@@ -52,6 +52,15 @@ stopRecording.onclick = () => {
     startRecording.textContent = "録音開始";
 }
 
+playButton.onclick = () => {
+  let id = 'audio';
+  if( typeof( document.getElementById(id).currentTime ) != 'undefined' )
+  {
+    document.getElementById(id).currentTime = 0;
+  }
+  document.getElementById(id).play();
+}
+
 reverseButton.onclick = () => {
     if (reverse !== reversed) {
       buffer.getChannelData(0).reverse();
@@ -63,16 +72,6 @@ reverseButton.onclick = () => {
     source.connect(context.destination);
     source.onended = () => source.stop(0);
     source.start(0);
-}
-
-playButton.onclick = () => {
-  let id = 'audio';
-  if( typeof( document.getElementById(id).currentTime ) != 'undefined' )
-  {
-    document.getElementById(id).currentTime = 0;
-  }
-  
-  document.getElementById(id).play();
 }
 
 answerButton.onclick = () => {
