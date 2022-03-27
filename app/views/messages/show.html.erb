@@ -1,33 +1,32 @@
 <div class="container">
-  <div class="message-container">
-    <div class="main">
-      <h3 class="message-title-text">逆再生してメッセージを解読しよう！</h3>
-      <p class="message-top-text">左から右に文字を読んでね！<br>「録音中...」にならないときは<br>「音声リセット」を押してね！</p>
-      <div class="reverse-message-area">
-        <%= "#{@message.reverse_message}" %>
+  <div class="main">
+    <h3 class="message-title-text">逆再生してメッセージを解読しよう！</h3>
+    <p class="message-top-text">左から右に文字を読んでね！<br>「録音中...」にならないときは<br>「音声リセット」を押してね！</p>
+    <div class="reverse-message-area">
+      <%= "#{@message.reverse_message}" %>
+    </div>
+    <p class="attention">※スマホで外部アプリから使用すると1度しか録音できない場合があります！<br>Google ChromeやSafariからご利用お願いします！</p>
+    <div>
+      <input type="hidden" id="rate" size="3" value="1.0"/>
+      <div>
+        <button class="message-btn start" id="start">録音開始</button>
       </div>
       <div>
-        <input type="hidden" id="rate" size="3" value="1.0"/>
-        <div>
-          <button class="message-btn start" id="start">録音開始</button>
-        </div>
-        <div>
-          <button class="message-btn stop" id="stop">録音停止</button>
-        </div>
-        <div>
-          <audio id="audio"></audio>
-          <div>
-            <button class="message-btn playback" id="btn">再生</button>
-          </div>
-          <div>
-            <button class="message-btn reverse-playback" id="reverse_btn">逆再生</button>
-          </div>
-        </div>
-        <div>
-          <button class="message-btn reset" id="reload">音声リセット</button>
-        </div>
-        <%= render "messages/share_link", url: @url %>
+        <button class="message-btn stop" id="stop">録音停止</button>
       </div>
+      <div>
+        <audio id="audio"></audio>
+        <div>
+          <button class="message-btn playback" id="btn">再生</button>
+        </div>
+        <div>
+          <button class="message-btn reverse-playback" id="reverse_btn">逆再生</button>
+        </div>
+      </div>
+      <div>
+        <button class="message-btn reset" id="reload">音声リセット</button>
+      </div>
+      <%= render "messages/share_link", url: @url %>
     </div>
   </div>
 </div>
