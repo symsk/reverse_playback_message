@@ -1,14 +1,6 @@
-.fukidasi {
-  width: 1000px;
-  background-image: image-url('fukidasi.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 400px 250px;
-  padding-top: 155px;
-}
-
-.text-block {
-  padding-bottom: 40px;
+.message-fukidasi-img {
+  margin-bottom: -40px;
+  width: 100%;
 }
 
 .reverse-message-area {
@@ -43,10 +35,6 @@
 
 .message-top-text {
   font-size: 14px;
-}
-
-.message {
-  color: rgb(54, 54, 54);
 }
 
 .message-btn {
@@ -120,4 +108,13 @@
 
 .message-share-line:hover {
   color: rgb(255, 255, 255); 
+}
+
+.alert {
+  color: rgb(54, 54, 54);
+  -webkit-text-stroke: 0.2px rgb(255, 255, 255);
+  font-size: 20px;
+  background-color: #FFE552;
+  margin-bottom: -30px;
+  width: 100vw;
 }

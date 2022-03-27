@@ -33,6 +33,7 @@ class MessagesController < ApplicationController
       if @message.save
         redirect_to message_path(@message)
       else
+        flash.now[:alert] = "「ひらがな」だけで入力してね！"
         render :new
       end
   end
