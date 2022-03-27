@@ -15,7 +15,7 @@ let reversed = false;
 chunks = []
 
 reload.onclick = () => { 
-  location.reload();
+  location.reload(true);
 }
 
 startRecording.onclick = () => {
@@ -28,7 +28,7 @@ startRecording.onclick = () => {
       }).catch((err) => {
           console.log(err);
       });
-      // startRecording.disabled = true;
+      startRecording.disabled = true;
       startRecording.textContent = "録音中...";
 }
 
@@ -48,7 +48,7 @@ stopRecording.onclick = () => {
         document.getElementById("audio").src = window.URL.createObjectURL(event.data);
     }
     localStream.getTracks().forEach(track => track.stop());
-    // stopRecording.disabled = true;
+    stopRecording.disabled = true;
     startRecording.textContent = "録音開始";
 }
 
