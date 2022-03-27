@@ -1,11 +1,11 @@
 <div class="container">
   <div class="main">
     <h3 class="message-title-text">逆再生してメッセージを解読しよう！</h3>
-    <p class="message-top-text">左から右に文字を読んでね！<br>「録音中...」にならないときは<br>「音声リセット」を押してね！</p>
+    <p class="message-top-text">左から右に文字を読んでね！</p>
     <div class="reverse-message-area">
       <%= "#{@message.reverse_message}" %>
     </div>
-    <p class="attention">※スマホで外部アプリから使用すると1度しか録音できない場合があります！<br>Google ChromeやSafariからご利用お願いします！</p>
+    <p class="attention">※スマホで外部アプリからアクセスすると<br>1度しか録音できない場合があります！<br>その場合、Google Chromeや<br>Safariからご利用お願いします！</p>
     <div>
       <input type="hidden" id="rate" size="3" value="1.0"/>
       <div>
@@ -25,6 +25,7 @@
       </div>
       <div>
         <button class="message-btn reset" id="reload">音声リセット</button>
+        <p class="message-top-text-reset">※「録音中...」にならないときは<br>「音声リセット」を押してね！</p>
       </div>
       <%= render "messages/share_link", url: @url %>
     </div>
