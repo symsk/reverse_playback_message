@@ -1,12 +1,12 @@
 <div class="container">
   <div class="main">
     <div>
-      <% if "#{@quiz.id}" == "1" %>
+      <% if "#{@quiz.answer}" == "遊びは終わりだ" %>
         <p>初級</p>
         <div>
           <%= audio_tag(asset_path("reverse_play.mp3"), controls: true) %>
         </div>
-      <% elsif "#{@quiz.id}" == "2" %>
+      <% elsif "#{@quiz.answer}" == "友達のままじゃ嫌なんです" %>
         <p>中級</p>
         <div>
           <%= audio_tag(asset_path("reverse_friend.mp3"), controls: true) %>
