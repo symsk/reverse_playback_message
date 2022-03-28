@@ -2,41 +2,23 @@
   <div class="main">
     <div>
       <% if "#{@quiz.answer}" == "遊びは終わりだ" %>
-        <p>初級</p>
+        <h2>初級</h2>
         <div>
           <%= audio_tag(asset_path("reverse_play.mp3"), controls: true) %>
         </div>
       <% elsif "#{@quiz.answer}" == "友達のままじゃ嫌なんです" %>
-        <p>中級</p>
+        <h2>中級</h2>
         <div>
           <%= audio_tag(asset_path("reverse_friend.mp3"), controls: true) %>
         </div>
       <% else %>
-        <p>上級</p>
+        <h2>上級</h2>
         <div>
           <%= audio_tag(asset_path("reverse_mountain.mp3"), controls: true) %>
         </div>
       <% end %>
-      <div>
-        <input type="hidden" id="rate" size="3" value="1.0"/>
-        <div>
-          <button id="start">録音開始</button>
-        </div>
-        <div>
-          <button id="stop">録音停止</button>
-        </div>
-        <audio id="audio"></audio>
-        <div>
-          <button id="btn">再生ボタン</button>
-        </div>
-        <div>
-          <button id="reverse_btn">逆再生ボタン</button>
-        </div>
-        <div>
-          <button><a id="reload">リセット</a></button>
-        </div>
-        <button id="answer_btn">答え</button>
-
+        <%= render partial: 'shared/recording' %>
+        <button id="answer_btn" class="answer-btn">答え</button>
         <p id="answer" style="visibility: hidden;"><%= "答え："+"#{@quiz.answer}" %></p>
       </div>
     </div>
