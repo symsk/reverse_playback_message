@@ -5,28 +5,7 @@
     <div class="reverse-message-area">
       <%= "#{@message.reverse_message}" %>
     </div>
-    <p class="attention">※スマホで外部アプリからアクセスすると<br>1度しか録音できない場合があります！<br>その場合、Google Chromeや<br>Safariからご利用お願いします！</p>
-    <div>
-      <input type="hidden" id="rate" size="3" value="1.0"/>
-      <div>
-        <button class="message-btn start" id="start">録音開始</button>
-      </div>
-      <div>
-        <button class="message-btn stop" id="stop">録音停止</button>
-      </div>
-      <div>
-        <audio id="audio"></audio>
-        <div>
-          <button class="message-btn playback" id="btn">再生</button>
-        </div>
-        <div>
-          <button class="message-btn reverse-playback" id="reverse_btn">逆再生</button>
-        </div>
-      </div>
-      <div>
-        <button class="message-btn reset" id="reload">音声リセット</button>
-        <p class="message-top-text-reset">※もう一度録音する場合は<br>「音声リセット」を押してね！</p>
-      </div>
+      <%= render partial: 'shared/recording' %>
       <%= render "messages/share_link", url: @url %>
     </div>
   </div>

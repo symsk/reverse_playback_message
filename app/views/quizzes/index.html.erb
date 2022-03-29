@@ -1,10 +1,12 @@
 <div class="container">
   <div class="main">
-  <h2>1人で遊ぶ<br>問題一覧</h2>
-    <div>
-      <p><%= link_to "【初級】", "quizzes/1" %></p>
-      <p><%= link_to "【中級】", "quizzes/2" %></p>
-      <p><%= link_to "【上級】", "quizzes/3" %></p>
+    <div class="quiz-fukidasi-img">
+      <%= image_tag "quiz_fukidasi.png" %>
+    </div>
+    <div class="quizzes">
+      <p><%= link_to "初級", "quizzes/1", class: "quizzes-text" %></p>
+      <p><%= link_to "中級", "quizzes/2", class: "quizzes-text" %></p>
+      <p><%= link_to "上級", "quizzes/3", class: "quizzes-text" %></p>
     </div>
   </div>
 </div>
