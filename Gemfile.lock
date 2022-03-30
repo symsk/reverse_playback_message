@@ -1503,6 +1503,14 @@ GEM
       sprockets-rails
       tilt
     semantic_range (3.0.0)
+    sentry-rails (5.2.1)
+      railties (>= 5.0)
+      sentry-ruby-core (~> 5.2.1)
+    sentry-ruby (5.2.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      sentry-ruby-core (= 5.2.1)
+    sentry-ruby-core (5.2.1)
+      concurrent-ruby
     sexp_processor (4.16.0)
     sitemap_generator (6.2.1)
       builder (~> 3.0)
@@ -1572,6 +1580,8 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   sass-rails (>= 6)
+  sentry-rails
+  sentry-ruby
   sitemap_generator
   sorcery
   spring
