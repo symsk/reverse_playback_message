@@ -7,9 +7,10 @@
 
 .img-title {
   position: absolute;
-  height: 256px;
-  top: -93px;
-  left: -110px;
+  width: 150px;
+  height: auto;
+  top: -2px;
+  left: 15px;
 }
 
 #g-nav {
@@ -132,12 +133,18 @@
 }
 
 .footer-area a {
-  // display: block;
-  margin: 5px auto;
   text-align: center;
   width: 100%;
   margin-right: 20px;
   margin-left: 20px;
+}
+
+.terms-of-use {
+  padding-left: 5px;
+}
+
+.privacy-policy {
+  padding-left: 12px;
 }
 
 @media screen and (min-width:900px) {
