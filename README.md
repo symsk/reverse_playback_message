@@ -58,8 +58,8 @@ LINE等のメッセージを盛り上げたい方に
 企画〜技術調査:2/4〆切  
 README〜ER図作成:2/11〆切  
 メイン機能実装:2/11 - 3/11  
-β版をRUNTEQ内リリース(MVP):3/11〆切  
-本番リリース:3/31
+β版をRUNTEQ内リリース(MVP):4/1〆切  
+本番リリース:4/8
 
 ## 画面遷移図
 https://www.figma.com/file/ZBvJjiR69nUjkTuUjBEsX6/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA?node-id=0%3A1  
