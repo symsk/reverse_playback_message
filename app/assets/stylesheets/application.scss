@@ -13,14 +13,10 @@
  *= require_tree .
  *= require_self
  */
-@font-face {
-  font-family: "keifont";
-  src: asset_url('keifont.ttf');
-}
-
 .bg {
   background-color: #FFF3D6;
-  font-family: "keifont";
+  font-family: "ヒラギノ角ゴシック", "Helvetica Neue";
+  font-weight: bold;
 }
 
 body {

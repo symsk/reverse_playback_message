@@ -7,6 +7,10 @@
   width: 100%;
 }
 
+#text-area {
+  font-weight: bold;
+}
+
 .reverse-message-area {
   background-color:rgb(255, 255, 255);
   padding: 20px 20px;
@@ -22,6 +26,7 @@
   -webkit-text-stroke: 0.5px rgb(54, 54, 54);
   border: none;
   background: transparent;
+  font-weight: bold;
 }
 
 .field_with_errors {
@@ -35,6 +40,7 @@
 .message-title-text {
   font-size: 18px;
   padding-top: 40px;
+  font-weight: bold;
 }
 
 .message-top-text {
@@ -53,6 +59,7 @@
   -webkit-text-stroke: 0.3px rgb(54, 54, 54);
   border: none;
   background: transparent;
+  font-weight: bold;
 }
 
 .reset {
