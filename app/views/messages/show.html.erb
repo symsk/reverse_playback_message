@@ -1,12 +1,14 @@
-<div class="container">
-  <div class="main">
-    <h3 class="message-title-text">逆再生してメッセージを解読しよう！</h3>
-    <p class="message-top-text">左から右に文字を読んでね！</p>
-    <div class="reverse-message-area">
-      <%= "#{@message.reverse_message}" %>
-    </div>
-      <%= render partial: 'shared/recording' %>
-      <%= render "shared/share_link", url: @url %>
+<div class="message-show-container">
+  <div class="container">
+    <div class="main">
+      <h3 class="message-title-text">逆再生してメッセージを解読しよう！</h3>
+      <p class="message-top-text">左から右に文字を読んでね！</p>
+      <div class="reverse-message-area">
+        <%= "#{@message.reverse_message}" %>
+      </div>
+        <%= render partial: 'shared/recording' %>
+        <%= render "shared/share_link", url: @url %>
+      </div>
     </div>
   </div>
 </div>

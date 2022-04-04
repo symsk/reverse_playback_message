@@ -1,25 +1,27 @@
-<div class="container">
-  <div class="main">
-    <div>
-      <% if "#{@quiz.answer}" == "遊びは終わりだ" %>
-        <h2>初級</h2>
-        <div>
-          <%= audio_tag(asset_path("reverse_play.mp3"), controls: true) %>
+<div class="quiz-show-container">
+  <div class="container">
+    <div class="main">
+      <div>
+        <% if "#{@quiz.answer}" == "遊びは終わりだ" %>
+          <h2>初級</h2>
+          <div>
+            <%= audio_tag(asset_path("reverse_play.mp3"), controls: true) %>
+          </div>
+        <% elsif "#{@quiz.answer}" == "友達のままじゃ嫌なんです" %>
+          <h2>中級</h2>
+          <div>
+            <%= audio_tag(asset_path("reverse_friend.mp3"), controls: true) %>
+          </div>
+        <% else %>
+          <h2>上級</h2>
+          <div>
+            <%= audio_tag(asset_path("reverse_mountain.mp3"), controls: true) %>
+          </div>
+        <% end %>
+          <%= render partial: 'shared/recording' %>
+          <button id="answer_btn" class="answer-btn">答え</button>
+          <p id="answer" style="visibility: hidden;"><br><%= "#{@quiz.answer}" %></p>
         </div>
-      <% elsif "#{@quiz.answer}" == "友達のままじゃ嫌なんです" %>
-        <h2>中級</h2>
-        <div>
-          <%= audio_tag(asset_path("reverse_friend.mp3"), controls: true) %>
-        </div>
-      <% else %>
-        <h2>上級</h2>
-        <div>
-          <%= audio_tag(asset_path("reverse_mountain.mp3"), controls: true) %>
-        </div>
-      <% end %>
-        <%= render partial: 'shared/recording' %>
-        <button id="answer_btn" class="answer-btn">答え</button>
-        <p id="answer" style="visibility: hidden;"><br><%= "#{@quiz.answer}" %></p>
       </div>
     </div>
   </div>
