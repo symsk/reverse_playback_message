@@ -14,7 +14,7 @@
 }
 
 .top-container {
-  margin-top: -100px;
+  margin-top: -50px;
 }
 
 .main {
@@ -53,12 +53,20 @@ h2 {
   margin-top: -200px;
 }
 
+.privacy-container {
+  margin-top: 80px;
+}
+
 .privacy {
   color: rgb(54, 54, 54);
   text-align: left;
   word-break: break-all;
   margin-top: -20px;
   margin-bottom: 40px;
+}
+
+.terms-container {
+  margin-top: 80px;
 }
 
 .terms {
@@ -69,7 +77,7 @@ h2 {
 }
 
 .guide-container {
-  margin-top: -80px
+  margin-top: -40px
 }
 
 .guide-text {
@@ -84,6 +92,10 @@ h2 {
 .guide-receive {
   margin-top: -200px;
   margin-bottom: -90px;
+}
+
+.message-sample-container {
+  margin-top: 30px;
 }
 
 .message-sample-img {
