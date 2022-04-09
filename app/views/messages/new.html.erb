@@ -4,8 +4,11 @@
 <div class="message-container">
   <div class="container">
     <div class="main">
-      <div class="message-fukidasi-img-area">
-        <%= image_tag "message_fukidasi.png", size: "430x280" %>
+      <div class="message-title-area">
+        <h2>メッセージを送る</h2>
+        <p class="message-text-area">逆再生化したいメッセージを入力しよう！</p>
+        <span class="marker">「よろしく」は「うきひそろゆ」になるよ！</span><br> 
+        <span class="marker">※ひらがなで入力してね！</span>
       </div>
       <div>
         <%= form_with model: @message, local: true do |f| %>

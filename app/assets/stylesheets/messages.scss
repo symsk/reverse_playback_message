@@ -6,10 +6,41 @@
   margin-top: 80px;
 }
 
-.message-fukidasi-img-area {
-  margin-bottom: -10px;
-  width: 100%;
+.message-title-area {
+  position: relative;
+  display: inline-block;
+  margin-top: -0px;
+  margin-bottom: 20px;
+  width: 360px;
+  height: 180px;
   text-align: center;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 50px;
+}
+
+.message-title-area h2 {
+  margin-top: -5px;
+  padding-bottom: 5px;
+}
+
+.message-title-area:before {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #fff;
+  z-index: 0;
+}
+
+.message-text-area {
+  margin-bottom: 10px;
+}
+
+.marker {
+  background: linear-gradient(transparent 60%, #FFE552 0%);
 }
 
 #text-area {
