@@ -3,10 +3,22 @@
     <div class="main">
       <h2>遊び方</h2>
       <p class="guide-text">メッセージやキーワードを逆再生化して、<br>解読してもらうアプリです！</p>
-      <%= image_tag "guide_send.png", class: "guide-send" %><br>
-      <%= image_tag "guide_receive.png", class: "guide-receive" %>
+      <div class="guide-area">
+        <p class="guide-area-title">送る側</p>
+        <div class="guide-area-text">
+          <p>①メッセージを入力</p>
+          <p>②移動したページをシェア</p>
+        </div>
+      </div>
+      <div class="guide-area">
+        <p class="guide-area-title">受け取った側</p>
+        <div class="guide-area-text">
+          <p>①メッセージを読み上げて録音</p>
+          <p>②逆再生で通常のメッセージに戻す</p>
+        </div>
+      </div>
       <div>
-        <%= button_to "メッセージを送る", new_message_path, method: :get, class: "bg-warning text-white text" %>
+        <%= button_to "メッセージを送る", new_message_path, method: :get, class: "bg-warning text-white text guide-btn" %>
       </div>
     </div>
   </div>

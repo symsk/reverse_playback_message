@@ -84,13 +84,29 @@ h2 {
   color: rgb(54, 54, 54);
 }
 
-.guide-send {
-  margin-top: -105px;
+.guide-area {
+  background-color: #fff;
+  border-radius: 15px;
+  height: 120px;
+  text-align: center;
+  padding-top: 12px;
+  margin-top: 15px;
+}
+.guide-area-title {
+  font-size: 20px;
 }
 
-.guide-receive {
-  margin-top: -200px;
-  margin-bottom: -90px;
+.guide-area-text {
+  display: inline-block;
+  text-align: left;
+}
+
+.guide-area-text p {
+  margin-top: -10px;
+}
+
+.guide-btn {
+  margin-top: 15px;
 }
 
 .message-sample-container {
