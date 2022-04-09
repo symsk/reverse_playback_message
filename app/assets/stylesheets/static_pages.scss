@@ -49,7 +49,6 @@ h2 {
 }
 
 .top-fukidasi {
-  width: 100%;
   margin-top: -200px;
 }
 
@@ -85,26 +84,51 @@ h2 {
   color: rgb(54, 54, 54);
 }
 
-.guide-send {
-  margin-top: -105px;
+.guide-area {
+  background-color: #fff;
+  border-radius: 15px;
+  height: 120px;
+  text-align: center;
+  padding-top: 12px;
+  margin-top: 15px;
+}
+.guide-area-title {
+  font-size: 20px;
 }
 
-.guide-receive {
-  margin-top: -200px;
-  margin-bottom: -90px;
+.guide-area-text {
+  display: inline-block;
+  text-align: left;
+}
+
+.guide-area-text p {
+  margin-top: -10px;
+}
+
+.guide-btn {
+  margin-top: 15px;
 }
 
 .message-sample-container {
   margin-top: 30px;
 }
 
-.message-sample-img {
-  margin-top: -120px;
+.message-sample-area {
+  margin-top: 15px;
   margin-bottom: -10px;
+  display: inline-block;
+}
+
+.message-sample-area p {
+  padding-top: 22px;
+  width: 200px;
+  height: 70px;
+  text-align: center;
+  background: #fff;
+  border-radius: 15px;
 }
 
 .sample-description {
-  margin-top: -190px;
-  margin-bottom: 50px;
+  margin-top: 20px;
   color: rgb(54, 54, 54);
 }
