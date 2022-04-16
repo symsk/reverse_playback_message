@@ -5,11 +5,14 @@
         <h2>1人で遊ぶ</h2>
         <p>問題</p>
       </div>
-      <p>聴こえた音声を覚えて録音してみよう！<br>上手く言えると何言ってるかがわかります！</p>
+      <p>録音しながらメッセージを読み上げてね！<br>上手く言えると何言ってるかがわかります！</p>
       <div class="quizzes">
-        <p><%= link_to "初級", "quizzes/1", class: "quizzes-text" %></p>
-        <p><%= link_to "中級", "quizzes/2", class: "quizzes-text" %></p>
-        <p><%= link_to "上級", "quizzes/3", class: "quizzes-text" %></p>
+        <h2>かんたん</h2>
+        <% @easy_quizzes.each do |easy| %>
+          <%= link_to quiz_path(easy), class: "quizzes-text" do %>
+            <%= easy.question %>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>
