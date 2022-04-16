@@ -1,0 +1,7 @@
+ja:
+  enums:
+    quiz:
+      difficulty:
+        easy: かんたん
+        normal: ふつう
+        hard: むずかしい

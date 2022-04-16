@@ -5,9 +5,9 @@
         <h2>1人で遊ぶ</h2>
         <p>問題</p>
       </div>
-      <p>録音しながらメッセージを読み上げてね！<br>上手く言えると何言ってるかがわかります！</p>
+        <p>録音しながらメッセージを読み上げてね！<br>上手く言えると何言ってるかがわかります！</p>
       <div class="quizzes">
-        <h2>かんたん</h2>
+        <h2>かんたん</h2><br>
         <% @easy_quizzes.each do |easy| %>
           <%= link_to quiz_path(easy), class: "quizzes-text" do %>
             <%= easy.question %>
