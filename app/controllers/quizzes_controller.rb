@@ -1,5 +1,5 @@
 class QuizzesController < ApplicationController
-  before_action :require_login, only: %i[new create]
+  # before_action :require_login, only: %i[new create]
   
   def index; end
 
@@ -20,6 +20,6 @@ class QuizzesController < ApplicationController
   private
 
   def quiz_params
-    params.require(:quiz).permit(:answer, :reverse_voice).merge(user_id: current_user.id)
+    params.require(:quiz).permit(:question, :answer, :difficulty).merge(user_id: current_user.id)
   end
 end

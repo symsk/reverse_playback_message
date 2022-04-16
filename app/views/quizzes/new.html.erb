@@ -5,19 +5,23 @@
     </div>
     <%= form_with model: @quiz, local: true do |f| %>
     <div>
+      <%= f.label :question, "問題" %>
+    </div>
+    <div>  
+      <%= f.text_field :question %>
+    </div>
+    <div>
       <%= f.label :answer, "答え" %>
     </div>
     <div>  
       <%= f.text_field :answer %>
     </div>
-
     <div>
-      <%= f.label :reverse_voice, "逆再生音声ファイル" %>
-    </div>  
-    <div>  
-      <%= f.file_field :reverse_voice %>
+      <%= f.label :difficulty, "難易度" %>
     </div>
-    
+    <div>
+      <%= f.select :difficulty, Quiz.difficulties.keys %>
+    </div>
     <div>
       <%= f.submit "保存" %>
     </div>
