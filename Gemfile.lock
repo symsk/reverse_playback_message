@@ -1316,6 +1316,8 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    enum_help (0.0.18)
+      activesupport (>= 3.0.0)
     erubi (1.10.0)
     erubis (2.7.0)
     excon (0.92.1)
@@ -1428,6 +1430,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
+    rails-i18n (7.0.3)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     rails_best_practices (1.23.1)
       activesupport
       code_analyzer (~> 0.5.5)
@@ -1563,6 +1568,7 @@ DEPENDENCIES
   byebug
   carrierwave
   dotenv-rails
+  enum_help
   factory_bot_rails
   fog-aws
   jbuilder (~> 2.7)
@@ -1572,6 +1578,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4)
+  rails-i18n
   rails_best_practices
   romkan
   rspec-rails (~> 5.0.0)

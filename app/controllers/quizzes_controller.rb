@@ -1,7 +1,11 @@
 class QuizzesController < ApplicationController
-  before_action :require_login, only: %i[new create]
+  # before_action :require_login, only: %i[new create]
   
-  def index; end
+  def index
+    @easy_quizzes = Quiz.easy
+    @normal_quizzes = Quiz.normal
+    @hard_quizzes = Quiz.hard
+  end
 
   def show
     @quiz = Quiz.find(params[:id])
@@ -20,6 +24,6 @@ class QuizzesController < ApplicationController
   private
 
   def quiz_params
-    params.require(:quiz).permit(:answer, :reverse_voice).merge(user_id: current_user.id)
+    params.require(:quiz).permit(:question, :answer, :difficulty).merge(user_id: current_user.id)
   end
 end

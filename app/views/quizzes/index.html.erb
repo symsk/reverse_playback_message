@@ -5,11 +5,26 @@
         <h2>1人で遊ぶ</h2>
         <p>問題</p>
       </div>
-      <p>聴こえた音声を覚えて録音してみよう！<br>上手く言えると何言ってるかがわかります！</p>
+      <p class="quiz-description">録音しながらメッセージを読み上げてね！<br>上手く言えると何言ってるかがわかります！</p>
       <div class="quizzes">
-        <p><%= link_to "初級", "quizzes/1", class: "quizzes-text" %></p>
-        <p><%= link_to "中級", "quizzes/2", class: "quizzes-text" %></p>
-        <p><%= link_to "上級", "quizzes/3", class: "quizzes-text" %></p>
+        <h2>かんたん</h2>
+        <% @easy_quizzes.each do |easy| %>
+          <%= link_to quiz_path(easy) , class: "quizzes-text" do %>
+            <div class="quizzes-btn"><%= easy.question.truncate(10) %></div>
+          <% end %>
+        <% end %>
+        <h2>ふつう</h2>
+        <% @normal_quizzes.each do |normal| %>
+          <%= link_to quiz_path(normal) , class: "quizzes-text" do %>
+            <div class="quizzes-btn"><%= normal.question.truncate(11) %></div>
+          <% end %>
+        <% end %>
+        <h2>むずかしい</h2>
+        <% @hard_quizzes.each do |hard| %>
+          <%= link_to quiz_path(hard) , class: "quizzes-text" do %>
+            <div class="quizzes-btn"><%= hard.question.truncate(11) %></div>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>

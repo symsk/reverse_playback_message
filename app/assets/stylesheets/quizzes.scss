@@ -1,5 +1,6 @@
 .quiz-container {
-  margin-top: -50px;
+  padding-top: 140px;
+  padding-bottom: 60px;
 }
 
 .quiz-show-container {
@@ -19,13 +20,9 @@
   border-radius: 50px;
 }
 
-.quiz-title-area h2 {
-  margin-top: 5px;
-}
-
 .quiz-title-area p {
-  margin-top: -2px;
-  font-size: 27px;
+  margin-top: -5px;
+  font-size: 29px;
 }
 
 .quiz-title-area:before {
@@ -39,18 +36,30 @@
   z-index: 0;
 }
 
+.quiz-description {
+  margin-top: 2px;
+  margin-bottom: -10px;
+}
+
 .quizzes-text {
   text-decoration: none;
+}
+
+.quizzes-btn {
   color: rgb(54, 54, 54);
   font-size: 20px;
   background: #FAB400;
   border-radius: 30px;
-  margin-top: 100px;
+  margin-top: 10px;
   padding: 13px 50px;
 }
 
 .quizzes-text:hover {
   color: rgb(95, 95, 95); 
+}
+
+.quizzes-btn {
+  margin-top: 10px;
 }
 
 .quizzes p {
