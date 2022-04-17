@@ -7,10 +7,10 @@
       </div>
         <p>録音しながらメッセージを読み上げてね！<br>上手く言えると何言ってるかがわかります！</p>
       <div class="quizzes">
-        <h2>かんたん</h2><br>
+        <h2>かんたん</h2>
         <% @easy_quizzes.each do |easy| %>
-          <%= link_to quiz_path(easy), class: "quizzes-text" do %>
-            <%= easy.question %>
+          <%= link_to quiz_path(easy) , class: "quizzes-text" do %>
+            <div class="quizzes-btn"><%= easy.question.truncate(10) %></div>
           <% end %>
         <% end %>
       </div>
