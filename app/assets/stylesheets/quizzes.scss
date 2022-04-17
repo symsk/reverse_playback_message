@@ -20,7 +20,7 @@
 }
 
 .quiz-title-area h2 {
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 .quiz-title-area p {
@@ -37,6 +37,11 @@
   border: 15px solid transparent;
   border-top: 15px solid #fff;
   z-index: 0;
+}
+
+.quiz-description {
+  margin-top: 2px;
+  margin-bottom: -10px;
 }
 
 .quizzes-text {
