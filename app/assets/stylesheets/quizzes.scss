@@ -1,5 +1,6 @@
 .quiz-container {
-  margin-top: -50px;
+  padding-top: 140px;
+  padding-bottom: 60px;
 }
 
 .quiz-show-container {
@@ -19,13 +20,9 @@
   border-radius: 50px;
 }
 
-.quiz-title-area h2 {
-  margin-top: 2px;
-}
-
 .quiz-title-area p {
-  margin-top: -2px;
-  font-size: 27px;
+  margin-top: -5px;
+  font-size: 29px;
 }
 
 .quiz-title-area:before {

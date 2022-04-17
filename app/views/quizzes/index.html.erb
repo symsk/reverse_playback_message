@@ -13,6 +13,18 @@
             <div class="quizzes-btn"><%= easy.question.truncate(10) %></div>
           <% end %>
         <% end %>
+        <h2>ふつう</h2>
+        <% @normal_quizzes.each do |normal| %>
+          <%= link_to quiz_path(normal) , class: "quizzes-text" do %>
+            <div class="quizzes-btn"><%= normal.question.truncate(11) %></div>
+          <% end %>
+        <% end %>
+        <h2>むずかしい</h2>
+        <% @hard_quizzes.each do |hard| %>
+          <%= link_to quiz_path(hard) , class: "quizzes-text" do %>
+            <div class="quizzes-btn"><%= hard.question.truncate(11) %></div>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>

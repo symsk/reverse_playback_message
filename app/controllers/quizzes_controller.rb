@@ -3,6 +3,8 @@ class QuizzesController < ApplicationController
   
   def index
     @easy_quizzes = Quiz.easy
+    @normal_quizzes = Quiz.normal
+    @hard_quizzes = Quiz.hard
   end
 
   def show

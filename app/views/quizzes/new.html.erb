@@ -20,7 +20,7 @@
       <%= f.label :difficulty, "難易度" %>
     </div>
     <div>
-      <%= f.select :difficulty, Quiz.difficulties_i18n.invert.keys %>
+      <%= f.select :difficulty, Quiz.difficulties.keys %>
     </div>
     <div>
       <%= f.submit "保存" %>
