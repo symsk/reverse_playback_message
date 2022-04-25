@@ -1,13 +1,13 @@
 <p class="mt-2 mb-2">このページを共有しよう！</p>
-<input id="copyTarget" type="text" value="<%= "#{url}" %>" readonly>
+<input id="copyTarget" type="text" value="<%= "#{url}" %>/?openExternalBrowser=1" readonly>
 <div>
   <button onclick="copyToClipboard()" class="url-btn bg-warning text-white">URLをコピー</button>
 </div>
 <div class="message-share-area-twitter">
-  <p><%= link_to "Twitterでシェア" , "https://twitter.com/share?url=#{url}", class: "message-share-twitter", target: "_blank" %></p>
+  <p><%= link_to "Twitterでシェア" , "https://twitter.com/share?url=#{url}/?openExternalBrowser=1", class: "message-share-twitter", target: "_blank" %></p>
 </div>
 <div class="message-share-area-line">
-  <p><%= link_to "LINEでシェア" , "https://line.me/R/msg/text/?#{url}", class: "message-share-line", target: "_blank" %></p>
+  <p><%= link_to "LINEでシェア" , "https://line.me/R/msg/text/?#{url}/?openExternalBrowser=1", class: "message-share-line", target: "_blank" %></p>
   <br>
 </div>
 <script>
