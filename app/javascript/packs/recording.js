@@ -73,11 +73,3 @@ reverseButton.onclick = () => {
     source.onended = () => source.stop(0);
     source.start(0);
 }
-
-answerButton.onclick = () => {
-  if(getComputedStyle(answer).visibility == "hidden"){
-    answer.style.visibility = "visible";
-  } else {
-    answer.style.visibility = "hidden";
-  }
-}
