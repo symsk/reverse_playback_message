@@ -9,10 +9,23 @@
       </div>
       <div>
         <%= render partial: 'shared/recording' %>
-        <button id="answer_btn" class="answer-btn">答え</button>
-        <p id="answer" style="visibility: hidden;"><br><%= "#{@quiz.answer}" %></p>
+      </div>
+      <div>
+        <input id="copyTarget" type="hidden" value="<%= "#{@quiz.answer}" %>" readonly>
+        <button onclick="copyToClipboard()" class="answer-btn">答え</button>
+      </div>
+      <div class="quizzes-link-area">
+        <%= link_to "問題一覧", quizzes_path, class: "quizzes-link-btn" %>
       </div>
     </div>
   </div>
 </div>
+<script>
+  function copyToClipboard() {
+    let copyTarget = document.getElementById("copyTarget");
+    copyTarget.select();
+    document.execCommand("Copy");
+    alert("答え : " + copyTarget.value);
+  }
+</script>
 <%= javascript_pack_tag 'recording' %>

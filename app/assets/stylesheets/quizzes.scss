@@ -77,3 +77,21 @@
   border: none;
   font-weight: bold;
 }
+
+.quizzes-link-area {
+  margin-top: 23px;
+  margin-bottom: 100px;
+}
+
+.quizzes-link-btn {
+  background: #FAB400;
+  color: #fff;
+  padding: 27px 68px;
+  text-decoration: none;
+  border-radius: 40px;
+  -webkit-text-stroke: 0.3px rgb(54, 54, 54);
+}
+
+.quizzes-link-btn:hover {
+  color: rgb(255, 255, 255); 
+}
