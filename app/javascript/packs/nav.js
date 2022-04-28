@@ -1,9 +1,10 @@
-$(".open-btn").click(function () {
-	$(this).toggleClass('active');
-  $("#g-nav").toggleClass('panelactive');
-});
+let nav = document.getElementById('nav-wrapper');
+let hamburger = document.getElementById('js-hamburger');
+let blackBg = document.getElementById('js-black-bg');
 
-$("#g-nav a").click(function () {
-  $(".open-btn").removeClass('active');
-  $("#g-nav").removeClass('panelactive');
+hamburger.addEventListener('click', function () {
+    nav.classList.toggle('open');
+});
+blackBg.addEventListener('click', function () {
+    nav.classList.remove('open');
 });

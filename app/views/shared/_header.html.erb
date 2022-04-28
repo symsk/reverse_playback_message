@@ -1,25 +1,21 @@
 <header class="sticky-top">
   <div class="header-area">
     <%= link_to image_tag("title.png", class: "img-title"), root_path %>
-    <div class="open-btn"><span></span><span></span><span></span></div>
-    <nav id="g-nav">
-      <div id="g-nav-list">
-        <ul>
-          <li>
-            <%= link_to "遊び方", guide_path %>
-          </li>
-          <li >
-            <%= link_to "メッセージを送る", new_message_path %>
-          </li>
-          <li>
-            <%= link_to "メッセージサンプル", message_sample_path %>
-          </li>
-          <li>
-            <%= link_to "1人で遊ぶ", quizzes_path %>
-          </li>
-        </ul>
+    <div id="nav-wrapper" class="nav-wrapper">
+      <div class="hamburger" id="js-hamburger">
+        <span class="hamburger__line hamburger__line--1"></span>
+        <span class="hamburger__line hamburger__line--2"></span>
+        <span class="hamburger__line hamburger__line--3"></span>
       </div>
-    </nav>
-  </div>
+      <nav class="sp-nav">
+        <ul>
+          <li><%= link_to "遊び方", guide_path, class: "menu-list" %></li>
+          <li><%= link_to "メッセージを送る", new_message_path, class: "menu-list" %></li>
+          <li><%= link_to "メッセージサンプル", message_sample_path, class: "menu-list" %></li>
+          <li><%= link_to "1人で遊ぶ", quizzes_path, class: "menu-list" %></li>
+        </ul>
+      </nav>
+      <div class="black-bg" id="js-black-bg"></div>
+    </div>
 </header>
 <%= javascript_pack_tag 'nav' %>
