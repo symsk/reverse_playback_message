@@ -53,10 +53,10 @@ stopRecording.onclick = () => {
 
 playButton.onclick = () => {
   let id = "audio";
-  if( typeof( document.getElementById(id).currentTime ) != "undefined" )
-  {
-    document.getElementById(id).currentTime = 0;
-  }
+  // if( typeof( document.getElementById(id).currentTime ) != "undefined" )
+  // {
+  //   document.getElementById(id).currentTime = 0;
+  // }
   document.getElementById(id).play();
 }
 
