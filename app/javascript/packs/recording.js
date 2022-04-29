@@ -47,7 +47,6 @@ stopRecording.onclick = () => {
         }
         document.getElementById("audio").src = window.URL.createObjectURL(event.data);
     }
-    // localStream.getTracks().forEach(track => track.stop());
     stopRecording.disabled = true;
     startRecording.textContent = "録音開始";
 }
