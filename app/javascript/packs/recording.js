@@ -1,4 +1,5 @@
 let reload = document.getElementById("reload");
+let playback = document.getElementById("audio");
 let startRecording = document.getElementById("start");
 let stopRecording = document.getElementById("stop");
 let playButton = document.getElementById("btn");
@@ -39,26 +40,20 @@ stopRecording.onclick = () => {
         if (event.data.size > 0) {
           chunks.push(event.data);
         }
-        const blob = new Blob(chunks)
-        const reader = new FileReader()
+        let blob = new Blob(chunks)
+        let reader = new FileReader()
         reader.readAsArrayBuffer(blob)
         reader.onload = () => {
           context.decodeAudioData(reader.result, (b) => buffer = b);
         }
-        document.getElementById("audio").src = window.URL.createObjectURL(event.data);
+        playback.src = window.URL.createObjectURL(event.data);
     }
-    localStream.getTracks().forEach(track => track.stop());
     stopRecording.disabled = true;
     startRecording.textContent = "録音開始";
 }
 
 playButton.onclick = () => {
-  let id = 'audio';
-  if( typeof( document.getElementById(id).currentTime ) != 'undefined' )
-  {
-    document.getElementById(id).currentTime = 0;
-  }
-  document.getElementById(id).play();
+  playback.play();
 }
 
 reverseButton.onclick = () => {
