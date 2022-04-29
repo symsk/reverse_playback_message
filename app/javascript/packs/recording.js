@@ -1,4 +1,5 @@
 let reload = document.getElementById("reload");
+let playback = document.getElementById("audio");
 let startRecording = document.getElementById("start");
 let stopRecording = document.getElementById("stop");
 let playButton = document.getElementById("btn");
@@ -45,19 +46,14 @@ stopRecording.onclick = () => {
         reader.onload = () => {
           context.decodeAudioData(reader.result, (b) => buffer = b);
         }
-        document.getElementById("audio").src = window.URL.createObjectURL(event.data);
+        playback.src = window.URL.createObjectURL(event.data);
     }
     stopRecording.disabled = true;
     startRecording.textContent = "録音開始";
 }
 
 playButton.onclick = () => {
-  let id = "audio";
-  // if( typeof( document.getElementById(id).currentTime ) != "undefined" )
-  // {
-  //   document.getElementById(id).currentTime = 0;
-  // }
-  document.getElementById(id).play();
+  playback.play();
 }
 
 reverseButton.onclick = () => {
