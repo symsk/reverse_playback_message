@@ -52,7 +52,6 @@ stopRecording.onclick = () => {
 }
 
 playButton.onclick = () => {
-  localStream.getTracks().forEach(track => track.stop());
   let id = "audio";
   // if( typeof( document.getElementById(id).currentTime ) != "undefined" )
   // {
