@@ -12,8 +12,6 @@ let localStream;
 let buffer = null;
 let reverse = true;
 let reversed = false;
-let micBlobUrl = null;
-const playback = document.getElementById('audio');
 chunks = []
 
 reload.onclick = () => { 
@@ -41,33 +39,26 @@ stopRecording.onclick = () => {
         if (event.data.size > 0) {
           chunks.push(event.data);
         }
-        const blob = new Blob(chunks)
-        const reader = new FileReader()
+        let blob = new Blob(chunks)
+        let reader = new FileReader()
         reader.readAsArrayBuffer(blob)
         reader.onload = () => {
           context.decodeAudioData(reader.result, (b) => buffer = b);
         }
-        micBlobUrl = window.URL.createObjectURL(event.data);
+        document.getElementById("audio").src = window.URL.createObjectURL(event.data);
     }
-    localStream.getTracks().forEach(track => track.stop());
+    // localStream.getTracks().forEach(track => track.stop());
     stopRecording.disabled = true;
     startRecording.textContent = "録音開始";
 }
 
 playButton.onclick = () => {
-  // if (micBlobUrl) {
-  playback.src = micBlobUrl;
-//   playback.onended = function () {
-//     playback.pause();
-//     playback.src = "";
-// };
-  // let id = 'audio';
-  // if( typeof( document.getElementById(id).currentTime ) != 'undefined' )
-  // {
-  //   document.getElementById(id).currentTime = 0;
-  // }
-  playback.play();
-// }
+  let id = "audio";
+  if( typeof( document.getElementById(id).currentTime ) != "undefined" )
+  {
+    document.getElementById(id).currentTime = 0;
+  }
+  document.getElementById(id).play();
 }
 
 reverseButton.onclick = () => {
