@@ -1,6 +1,5 @@
-<% set_meta_tags image: "https://res.cloudinary.com/dp7jb0ugp/image/upload/l_text:Sawarabi%20Gothic_70_bold:#{@message.reverse_message},co_rgb:363636,w_900,c_fit/v1650191238/message_ogp_ocuny9.png",
-                  card: 'summary_large_image',
-                  description: 'メッセージが届きました！逆再生化されたメッセージを録音し、解読してください！' %>
+<% set_meta_tags og: {image: "https://res.cloudinary.com/dp7jb0ugp/image/upload/l_text:Sawarabi%20Gothic_70_bold:#{@message.reverse_message},co_rgb:363636,w_900,c_fit/v1650191238/message_ogp_ocuny9.png", description: "メッセージが届きました！逆再生文字化されたメッセージを録音し、解読してください！"},
+            twitter: {card: "summary_large_image"} %>
 <div class="message-show-container">
   <div class="container">
     <div class="main">
