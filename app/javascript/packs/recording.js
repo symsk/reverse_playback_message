@@ -17,7 +17,6 @@ chunks = []
 
 reload.onclick = () => { 
   location.reload();
-  chunks.length = 0;
 }
 
 startRecording.onclick = () => {
