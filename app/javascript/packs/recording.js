@@ -54,6 +54,7 @@ stopRecording.onclick = () => {
 
 playButton.onclick = () => {
   playback.play();
+  localStream.getTracks().forEach(track => track.stop());
 }
 
 reverseButton.onclick = () => {
