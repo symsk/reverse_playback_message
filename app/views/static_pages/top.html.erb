@@ -1,18 +1,14 @@
-<%# <%= javascript_pack_tag 'hello_vue.js' %>
-<%# <div id='vue-app'></div> %>
-<div class="top-container">
-  <div class="container">
-    <div class="main">
-      <%= image_tag "top_fukidasi.png", class: "top-fukidasi", size: "340x270" %>
-      <div class="top-link-group">
-        <%= link_to "遊び方" , guide_path, class: "top-link" %>
-      </div>
-      <div class="top-link-group">
-        <%= link_to "メッセージを送る" , new_message_path, class: "top-link" %>
-      </div>
-      <div class="top-link-group adjustment">
-        <%= link_to "1人で遊ぶ" , quizzes_path, class: "top-link" %>
-      </div>
+<div class="container">
+  <div class="main">
+    <%= image_tag "top_fukidasi.png", class: "top-fukidasi", size: "340x270" %>
+    <div class="top-link-group">
+      <%= link_to "遊び方" , guide_path, class: "top-link" %>
+    </div>
+    <div class="top-link-group">
+      <%= link_to "メッセージを送る" , new_message_path, class: "top-link" %>
+    </div>
+    <div class="top-link-group adjustment">
+      <%= link_to "1人で遊ぶ" , quizzes_path, class: "top-link" %>
     </div>
   </div>
 </div>

@@ -9,12 +9,14 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 150px;
   box-sizing: border-box;
 }
 
-.top-container {
-  margin-top: -50px;
+@media screen and (min-width:900px) {
+  .container {
+    padding-bottom: 70px;
+  }
 }
 
 .main {
