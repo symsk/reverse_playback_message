@@ -1,22 +1,24 @@
-<div class="quiz-show-container">
+<div>
   <div class="container">
     <div class="main">
-      <div>
-        <h2><%= "#{@quiz.difficulty_i18n}" %></h2><br>
-      </div>
-      <div class="reverse-message-area">
-        <%= "#{@quiz.question}" %>
-      </div>
-      <div>
-        <%= render partial: 'shared/recording' %>
-      </div>
-      <div>
-        <input id="copyTarget" type="hidden" value="<%= "#{@quiz.answer}" %>" readonly>
-        <button onclick="copyToClipboard()" class="answer-btn">答え</button>
-      </div>
-      <div class="quizzes-link-area">
-        <%= link_to "問題一覧", quizzes_path, class: "quizzes-link-btn" %>
-      </div>
+      <div class="quiz-show-area">
+        <div>
+          <h2><%= "#{@quiz.difficulty_i18n}" %></h2><br>
+        </div>
+        <div class="reverse-message-area">
+          <%= "#{@quiz.question}" %>
+        </div>
+        <div>
+          <%= render partial: 'shared/recording' %>
+        </div>
+        <div>
+          <input id="copyTarget" type="hidden" value="<%= "#{@quiz.answer}" %>" readonly>
+          <button onclick="copyToClipboard()" class="answer-btn">答え</button>
+        </div>
+        <div class="quizzes-link-area">
+          <%= link_to "問題一覧", quizzes_path, class: "quizzes-link-btn" %>
+        </div>
+      </div>  
     </div>
   </div>
 </div>

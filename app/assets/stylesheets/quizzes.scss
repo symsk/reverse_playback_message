@@ -1,12 +1,3 @@
-.quiz-container {
-  padding-top: 140px;
-  padding-bottom: 60px;
-}
-
-.quiz-show-container {
-  margin-top: 90px;
-}
-
 .quiz-title-area {
   position: relative;
   display: inline-block;
@@ -45,6 +36,10 @@
   text-decoration: none;
 }
 
+.quizzes {
+  padding-bottom: 130px;
+}
+
 .quizzes-btn {
   color: rgb(54, 54, 54);
   font-size: 20px;
@@ -56,6 +51,11 @@
 
 .quizzes-text:hover {
   color: rgb(95, 95, 95); 
+}
+
+.quiz-show-area {
+  margin-top: -20px;
+  padding-bottom: 90px;
 }
 
 .quizzes-btn {
