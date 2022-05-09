@@ -9,13 +9,13 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding-bottom: 150px;
+  padding-bottom: 380px;
   box-sizing: border-box;
 }
 
 @media screen and (min-width:900px) {
   .container {
-    padding-bottom: 70px;
+    padding-bottom: 300px;
   }
 }
 
@@ -48,10 +48,6 @@ h2 {
 
 .top-link:hover {
   color: rgb(95, 95, 95); 
-}
-
-.top-fukidasi {
-  margin-top: -200px;
 }
 
 .privacy-container {
