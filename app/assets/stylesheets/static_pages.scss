@@ -10,12 +10,20 @@
   height: 100%;
   position: relative;
   box-sizing: border-box;
-  padding-top: 120px;
+  padding-top: 130px;
+}
+
+.top-area {
+  margin-top: 10px;
 }
 
 @media screen and (min-width:900px) {
   .container {
     padding-top: 170px;
+  }
+
+  .top-area {
+    margin-top: 40px;
   }
 }
 
@@ -55,14 +63,14 @@ h2 {
   text-align: left;
   word-break: break-all;
   margin-top: -20px;
-  margin-bottom: 40px;
+  padding-bottom: 150px;
 }
 
 .terms {
   color: rgb(54, 54, 54);
   text-align: left;
   margin-top: 15px;
-  margin-bottom: 40px;
+  padding-bottom: 150px;
 }
 
 .guide-text {
