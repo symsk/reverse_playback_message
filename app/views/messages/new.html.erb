@@ -1,23 +1,21 @@
 <% if alert %>
   <div class="alert"><%= alert.html_safe %></div>
 <% end %>
-<div class="message-container">
-  <div class="container">
-    <div class="main">
-      <div class="message-title-area">
-        <h2>メッセージを送る</h2>
-        <p class="message-text-area">逆再生化したいメッセージを入力しよう！</p>
-        <span class="marker">「よろしく」は「うきひそろゆ」になるよ！</span><br> 
-        <span class="marker">※ひらがなで入力してね！</span>
-      </div>
-      <div>
-        <%= form_with model: @message, local: true do |f| %>
-          <%= f.hidden_field :uuid %>
-          <%= f.text_area :message, id: "text-area", maxlength: 50, cols: 30, rows: 4 %><br>
-          <p class="text-counter">あと<span id="text-lest">50</span>文字入力できるよ！</p>
-          <%= f.submit "保存して共有ページへ", class: "bg-warning text-white text" %>
-        <% end %>
-      </div>
+<div class="container">
+  <div class="main">
+    <div class="message-title-area">
+      <h2>メッセージを送る</h2>
+      <p class="message-text-area">逆再生化したいメッセージを入力しよう！</p>
+      <span class="marker">「よろしく」は「うきひそろゆ」になるよ！</span><br> 
+      <span class="marker">※ひらがなで入力してね！</span>
+    </div>
+    <div>
+      <%= form_with model: @message, local: true do |f| %>
+        <%= f.hidden_field :uuid %>
+        <%= f.text_area :message, id: "text-area", maxlength: 50, cols: 30, rows: 4 %><br>
+        <p class="text-counter">あと<span id="text-lest">50</span>文字入力できるよ！</p>
+        <%= f.submit "保存して共有ページへ", class: "bg-warning text-white text" %>
+      <% end %>
     </div>
   </div>
 </div>

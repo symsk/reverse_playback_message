@@ -1,6 +1,6 @@
-<div class="quiz-show-container">
-  <div class="container">
-    <div class="main">
+<div class="container">
+  <div class="main">
+    <div class="quiz-show-area">
       <div>
         <h2><%= "#{@quiz.difficulty_i18n}" %></h2><br>
       </div>
@@ -17,7 +17,7 @@
       <div class="quizzes-link-area">
         <%= link_to "問題一覧", quizzes_path, class: "quizzes-link-btn" %>
       </div>
-    </div>
+    </div>  
   </div>
 </div>
 <script>

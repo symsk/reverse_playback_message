@@ -7,15 +7,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   position: relative;
-  padding-bottom: 380px;
   box-sizing: border-box;
+  padding-top: 120px;
 }
 
 @media screen and (min-width:900px) {
   .container {
-    padding-bottom: 300px;
+    padding-top: 170px;
   }
 }
 
@@ -50,10 +50,6 @@ h2 {
   color: rgb(95, 95, 95); 
 }
 
-.privacy-container {
-  margin-top: 80px;
-}
-
 .privacy {
   color: rgb(54, 54, 54);
   text-align: left;
@@ -62,19 +58,11 @@ h2 {
   margin-bottom: 40px;
 }
 
-.terms-container {
-  margin-top: 80px;
-}
-
 .terms {
   color: rgb(54, 54, 54);
   text-align: left;
   margin-top: 15px;
   margin-bottom: 40px;
-}
-
-.guide-container {
-  margin-top: -40px
 }
 
 .guide-text {
@@ -107,10 +95,6 @@ h2 {
   margin-top: 15px;
 }
 
-.message-sample-container {
-  margin-top: 30px;
-}
-
 .message-sample-area {
   margin-top: 15px;
   margin-bottom: -10px;
@@ -128,5 +112,6 @@ h2 {
 
 .sample-description {
   margin-top: 20px;
+  padding-bottom: 120px;
   color: rgb(54, 54, 54);
 }
