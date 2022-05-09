@@ -16,7 +16,7 @@ let reversed = false;
 chunks = []
 
 reload.onclick = () => { 
-  location.reload(true);
+  location.reload();
 }
 
 startRecording.onclick = () => {
