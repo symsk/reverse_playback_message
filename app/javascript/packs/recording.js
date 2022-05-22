@@ -21,14 +21,10 @@ reload.onclick = () => {
 
 startRecording.onclick = () => {
   navigator.mediaDevices.getUserMedia({ audio: true })
-      .then((stream) => {
-          localStream = stream;
-          mediaRecorder = new MediaRecorder(stream);
-          mediaRecorder.start();
-          console.log("Status: " + mediaRecorder.state);
-      }).catch((err) => {
-          console.log(err);
-      });
+    .then((stream) => {
+      localStream = stream;
+      mediaRecorder = new MediaRecorder(stream);
+      mediaRecorder.start()});
       startRecording.disabled = true;
       startRecording.textContent = "録音中...";
 }
