@@ -24,27 +24,28 @@ startRecording.onclick = () => {
     .then((stream) => {
       localStream = stream;
       mediaRecorder = new MediaRecorder(stream);
-      mediaRecorder.start()});
+      mediaRecorder.start()
+    });
       startRecording.disabled = true;
       startRecording.textContent = "録音中...";
 }
 
 stopRecording.onclick = () => {
-    mediaRecorder.stop();
-    mediaRecorder.ondataavailable = (event) => {
-        if (event.data.size > 0) {
-          chunks.push(event.data);
-        }
-        let blob = new Blob(chunks)
-        let reader = new FileReader()
-        reader.readAsArrayBuffer(blob)
-        reader.onload = () => {
-          context.decodeAudioData(reader.result, (b) => buffer = b);
-        }
-        playback.src = window.URL.createObjectURL(event.data);
+  mediaRecorder.stop();
+  mediaRecorder.ondataavailable = (event) => {
+    if (event.data.size > 0) {
+      chunks.push(event.data);
     }
-    stopRecording.disabled = true;
-    startRecording.textContent = "録音開始";
+    let blob = new Blob(chunks)
+    let reader = new FileReader()
+    reader.readAsArrayBuffer(blob)
+    reader.onload = () => {
+      context.decodeAudioData(reader.result, (b) => buffer = b);
+    }
+    playback.src = window.URL.createObjectURL(event.data);
+  }
+  stopRecording.disabled = true;
+  startRecording.textContent = "録音開始";
 }
 
 playButton.onclick = () => {
@@ -52,14 +53,14 @@ playButton.onclick = () => {
 }
 
 reverseButton.onclick = () => {
-    if (reverse !== reversed) {
-      buffer.getChannelData(0).reverse();
-      reversed = !reversed;
-    }
-    const source = context.createBufferSource();
-    source.buffer = buffer;
-    source.playbackRate.value = ((r) => 0 < r ? r : 1)(parseFloat(document.getElementById('rate').value));
-    source.connect(context.destination);
-    source.onended = () => source.stop(0);
-    source.start(0);
+  if (reverse !== reversed) {
+    buffer.getChannelData(0).reverse();
+    reversed = !reversed;
+  }
+  const source = context.createBufferSource();
+  source.buffer = buffer;
+  source.playbackRate.value = ((r) => 0 < r ? r : 1)(parseFloat(document.getElementById('rate').value));
+  source.connect(context.destination);
+  source.onended = () => source.stop(0);
+  source.start(0);
 }
