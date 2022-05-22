@@ -31,7 +31,6 @@ startRecording.onclick = () => {
 
 stopRecording.onclick = () => {
     mediaRecorder.stop();
-    console.log("Status: " + mediaRecorder.state);
     mediaRecorder.ondataavailable = (event) => {
         if (event.data.size > 0) {
           chunks.push(event.data);
