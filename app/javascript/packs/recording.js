@@ -6,7 +6,6 @@ let playButton = document.getElementById("btn");
 let reverseButton = document.getElementById("reverse_btn");
 let answerButton = document.getElementById("answer_btn");
 let answer = document.getElementById("answer");
-let spinner = document.getElementById("spinner");
 const context = new AudioContext();
 let mediaRecorder;
 let localStream;
@@ -59,7 +58,7 @@ reverseButton.onclick = () => {
   }
   const source = context.createBufferSource();
   source.buffer = buffer;
-  source.playbackRate.value = ((r) => 0 < r ? r : 1)(parseFloat(document.getElementById('rate').value));
+  source.playbackRate.value = ((r) => 0 < r ? r : 1)(parseFloat(document.getElementById("rate").value));
   source.connect(context.destination);
   source.onended = () => source.stop(0);
   source.start(0);

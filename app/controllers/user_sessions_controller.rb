@@ -7,15 +7,15 @@ class UserSessionsController < ApplicationController
 
   def create
     if @user = login(params[:email], params[:password])
-      redirect_back_or_to root_path, notice: 'ログインしました'
+      redirect_back_or_to root_path, notice: "ログインしました"
     else
-      flash[:alert] = 'ログイン失敗'
+      flash[:alert] = "ログイン失敗"
       render :new
     end
   end
 
   def destroy
     logout
-    redirect_to root_path, notice: 'ログアウトしました'
+    redirect_to root_path, notice: "ログアウトしました"
   end
 end
