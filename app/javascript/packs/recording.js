@@ -6,7 +6,6 @@ let playButton = document.getElementById("btn");
 let reverseButton = document.getElementById("reverse_btn");
 let answerButton = document.getElementById("answer_btn");
 let answer = document.getElementById("answer");
-let spinner = document.getElementById("spinner");
 const context = new AudioContext();
 let mediaRecorder;
 let localStream;
