@@ -27,6 +27,6 @@ class Message < ApplicationRecord
       "h" => "ひ",
       "ぢ" => "でぃ",
       "s" => "す",
-    ).delete("a""b""c""d""e""f""g""h""i""j""k""l""m""n""o""p""q""r""s""t""u""v""w""x""y""z")
+    ).delete((/\A[a-z]+\z/).to_s)
   end
 end
