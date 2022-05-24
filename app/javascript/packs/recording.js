@@ -59,7 +59,7 @@ reverseButton.onclick = () => {
   }
   const source = context.createBufferSource();
   source.buffer = buffer;
-  source.playbackRate.value = ((r) => 0 < r ? r : 1)(parseFloat(document.getElementById('rate').value));
+  source.playbackRate.value = ((r) => 0 < r ? r : 1)(parseFloat(document.getElementById("rate").value));
   source.connect(context.destination);
   source.onended = () => source.stop(0);
   source.start(0);

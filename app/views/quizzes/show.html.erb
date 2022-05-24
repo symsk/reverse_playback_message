@@ -9,7 +9,7 @@
           <%= "#{@quiz.question}" %>
         </div>
         <div>
-          <%= render partial: 'shared/recording' %>
+          <%= render partial: "shared/recording" %>
         </div>
         <div>
           <input id="copyTarget" type="hidden" value="<%= "#{@quiz.answer}" %>" readonly>
@@ -30,4 +30,4 @@
     alert("答え : " + copyTarget.value);
   }
 </script>
-<%= javascript_pack_tag 'recording' %>
+<%= javascript_pack_tag "recording" %>
