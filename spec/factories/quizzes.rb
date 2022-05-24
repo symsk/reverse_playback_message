@@ -2,6 +2,6 @@ FactoryBot.define do
   factory :quiz do
     user { nil }
     answer { "MyString" }
-    reverse_voice { "MyString" }
+    question { "MyString" }
   end
 end
