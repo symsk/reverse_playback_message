@@ -25,3 +25,4 @@ class MessagesController < ApplicationController
     params.require(:message).permit(:uuid, :message)
   end
 end
+
