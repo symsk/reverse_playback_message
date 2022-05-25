@@ -1,6 +1,6 @@
 class QuizzesController < ApplicationController
   before_action :require_login, only: %i[new create]
-  
+
   def index
     @easy_quizzes = Quiz.easy
     @normal_quizzes = Quiz.normal
