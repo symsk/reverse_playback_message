@@ -17,7 +17,7 @@
 |メッセージ入力画面|シェア画面|
 | ------------------------------------------------------------------|--------------------------------------------------------------------|
 | <img src="https://user-images.githubusercontent.com/85027739/173226761-b6eca294-d3d1-46a4-a6aa-d6ba6dec60ac.jpg">|<img src="https://user-images.githubusercontent.com/85027739/173226758-2fd44726-48e0-41c4-95a4-bc3c09118704.jpg">|
-|・「ひらがな」で任意のメッセージを入力<br>・「保存して共有ページへ」を押下後、シェア画面へ遷移|・逆再生化された文字列を録音<br>「逆再生」ボタンを押下することで、上手く言えた場合は変換前のメッセージ（今回は「ありがとう」）が聴こえます|
+|・「ひらがな」で任意のメッセージを入力<br>・「保存して共有ページへ」を押下後、シェア画面へ遷移|・逆再生化された文字列を録音<br>・「逆再生」ボタンを押下後、変換前のメッセージ（今回は「ありがとう」）が聴こえます|
 
 ## 全体の機能
 - 逆再生文字生成機能  
@@ -29,18 +29,18 @@
 ある文字列に対して「音声を逆再生した際に聴こえる言葉」へ変換する実装に苦労しました。  
 結果的に下記の手順で変換することができました。
 ```
-■「ありがとう」を逆再生化した文字列に変換する流れ  
+■「ありがとう」を逆再生化した文字列に変換する手順  
 (1)「ありがとう」をローマ字化  
 (2)「arigatou」に変換
 (3)「arigatou」をreverseメソッドで反転  
 (4)「uotagira」に反転  
 (5)「uotagira」をひらがなに変換  
-(6)「うおたぎら」で逆再生化した文字列の完成  
+(6)「うおたぎら」※逆再生化した文字列の完成  
 ```
 ## こだわった点
 「音声を逆再生した際に聴こえる言葉」に変換するGem `reverse_playback_word`を作成し、使用することでコードの記述量を削減しました。  
  [【Gem】GitHub：reverse_playback_word](https://github.com/symsk/reverse_playback_word)  
- [【Gem】RubyGems：reverse_playback_word]( https://rubygems.org/gems/reverse_playback_word)
+ [【Gem】RubyGems：reverse_playback_word](https://rubygems.org/gems/reverse_playback_word)
 
 ## 使用技術
 ### バックエンド
